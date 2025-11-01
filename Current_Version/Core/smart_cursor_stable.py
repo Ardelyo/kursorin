@@ -45,7 +45,10 @@ class SmartCursorStable:
             'voice_feedback': False,  # Disable by default to avoid issues
             'sound_feedback': True,
             'gesture_recognition': True,
-            'adaptive_speed': False  # Disable by default
+            'adaptive_speed': False,  # Disable by default
+            'tracking_type': 'hand',  # Options: 'hand', 'head', 'eye', 'pose', 'finger', 'body'
+            'tracking_sensitivity': 0.8,  # 0.1 to 1.0
+            'multi_tracking': False  # Allow multiple tracking types simultaneously
         }
 
         # Load settings safely
@@ -67,13 +70,54 @@ class SmartCursorStable:
         self.mouse_timeout = 30  # seconds
 
     def load_settings_safely(self):
-        """Load settings with error handling"""
+        """Load settings with comprehensive error handling"""
         try:
-            if os.path.exists('cursor_settings_stable.json'):
-                with open('cursor_settings_stable.json', 'r') as f:
+            settings_file = 'cursor_settings_stable.json'
+            if os.path.exists(settings_file):
+                # Check file size to prevent loading corrupted files
+                if os.path.getsize(settings_file) > 1024 * 1024:  # 1MB limit
+                    logging.warning("Settings file too large, using defaults")
+                    return
+
+                with open(settings_file, 'r', encoding='utf-8') as f:
                     loaded_settings = json.load(f)
-                    self.settings.update(loaded_settings)
+
+                # Validate loaded settings
+                if not isinstance(loaded_settings, dict):
+                    logging.warning("Invalid settings format, using defaults")
+                    return
+
+                # Safe update with validation
+                valid_keys = {
+                    'smoothing', 'dwell_time', 'voice_feedback', 'sound_feedback',
+                    'gesture_recognition', 'adaptive_speed', 'tracking_type',
+                    'tracking_sensitivity', 'multi_tracking'
+                }
+
+                for key, value in loaded_settings.items():
+                    if key in valid_keys:
+                        # Type checking and validation
+                        if key in ['voice_feedback', 'sound_feedback', 'gesture_recognition', 'adaptive_speed', 'multi_tracking']:
+                            if isinstance(value, bool):
+                                self.settings[key] = value
+                        elif key == 'tracking_type':
+                            if isinstance(value, str) and value in ['hand', 'head', 'eye', 'pose', 'finger', 'body']:
+                                self.settings[key] = value
+                        elif key == 'tracking_sensitivity':
+                            if isinstance(value, (int, float)) and 0.1 <= value <= 1.0:
+                                self.settings[key] = float(value)
+                        elif key in ['smoothing', 'dwell_time']:
+                            if isinstance(value, (int, float)) and value > 0:
+                                self.settings[key] = float(value)
+
                 logging.info("Settings loaded successfully")
+            else:
+                logging.info("No settings file found, using defaults")
+
+        except json.JSONDecodeError as e:
+            logging.warning(f"Corrupted settings file: {e}. Using defaults.")
+        except PermissionError as e:
+            logging.warning(f"Permission denied accessing settings: {e}. Using defaults.")
         except Exception as e:
             logging.warning(f"Could not load settings: {e}. Using defaults.")
 
@@ -231,18 +275,48 @@ class SmartCursorStable:
         ttk.Label(mouse_frame, text="Mouse Control:").pack(side=tk.LEFT)
         self.mouse_var = tk.BooleanVar(value=self.mouse_enabled)
         ttk.Checkbutton(mouse_frame, text="Enable",
-                       variable=self.mouse_var,
-                       command=self.toggle_mouse).pack(side=tk.RIGHT)
+        variable=self.mouse_var,
+        command=self.toggle_mouse).pack(side=tk.RIGHT)
 
         # Dwell time slider
         dwell_frame = ttk.Frame(settings_frame)
         dwell_frame.pack(fill=tk.X, pady=5)
         ttk.Label(dwell_frame, text="Dwell Click Time:").pack(side=tk.LEFT)
         self.dwell_scale = tk.Scale(dwell_frame, from_=0.5, to=3.0,
-                                   resolution=0.1, orient=tk.HORIZONTAL,
-                                   command=self.set_dwell_time)
+        resolution=0.1, orient=tk.HORIZONTAL,
+        command=self.set_dwell_time)
         self.dwell_scale.set(self.settings['dwell_time'])
         self.dwell_scale.pack(side=tk.RIGHT, fill=tk.X, expand=True)
+
+        # Tracking type selector
+        tracking_frame = ttk.Frame(settings_frame)
+        tracking_frame.pack(fill=tk.X, pady=5)
+        ttk.Label(tracking_frame, text="Tracking Type:").pack(side=tk.LEFT)
+        self.tracking_var = tk.StringVar(value=self.settings['tracking_type'])
+        tracking_combo = ttk.Combobox(tracking_frame, textvariable=self.tracking_var,
+                                    values=['hand', 'head', 'eye', 'pose', 'finger', 'body'],
+                                    state='readonly', width=10)
+        tracking_combo.pack(side=tk.RIGHT)
+        tracking_combo.bind('<<ComboboxSelected>>', self.set_tracking_type)
+
+        # Tracking sensitivity slider
+        sensitivity_frame = ttk.Frame(settings_frame)
+        sensitivity_frame.pack(fill=tk.X, pady=5)
+        ttk.Label(sensitivity_frame, text="Sensitivity:").pack(side=tk.LEFT)
+        self.sensitivity_scale = tk.Scale(sensitivity_frame, from_=0.1, to=1.0,
+                                        resolution=0.1, orient=tk.HORIZONTAL,
+                                        command=self.set_tracking_sensitivity)
+        self.sensitivity_scale.set(self.settings['tracking_sensitivity'])
+        self.sensitivity_scale.pack(side=tk.RIGHT, fill=tk.X, expand=True)
+
+        # Multi-tracking option
+        multi_frame = ttk.Frame(settings_frame)
+        multi_frame.pack(fill=tk.X, pady=2)
+        ttk.Label(multi_frame, text="Multi-Tracking:").pack(side=tk.LEFT)
+        self.multi_var = tk.BooleanVar(value=self.settings['multi_tracking'])
+        ttk.Checkbutton(multi_frame, text="Enable",
+                        variable=self.multi_var,
+                        command=self.toggle_multi_tracking).pack(side=tk.RIGHT)
 
         # Action buttons
         action_frame = ttk.Frame(self.gui)
@@ -335,6 +409,26 @@ class SmartCursorStable:
         """Set dwell click time"""
         self.settings['dwell_time'] = float(value)
 
+    def set_tracking_type(self, event=None):
+        """Set tracking type"""
+        self.settings['tracking_type'] = self.tracking_var.get()
+        logging.info(f"Tracking type changed to: {self.settings['tracking_type']}")
+        # Update high-performance cursor if needed
+        if hasattr(self, 'hp_cursor'):
+            self.hp_cursor.set_tracking_type(self.settings['tracking_type'])
+
+    def set_tracking_sensitivity(self, value):
+        """Set tracking sensitivity"""
+        self.settings['tracking_sensitivity'] = float(value)
+
+    def toggle_multi_tracking(self):
+        """Toggle multi-tracking mode"""
+        self.settings['multi_tracking'] = self.multi_var.get()
+        logging.info(f"Multi-tracking {'enabled' if self.settings['multi_tracking'] else 'disabled'}")
+        # Update high-performance cursor if needed
+        if hasattr(self, 'hp_cursor'):
+            self.hp_cursor.set_multi_tracking(self.settings['multi_tracking'])
+
     def start_calibration(self):
         """Start calibration wizard"""
         calibration_window = tk.Toplevel(self.gui)
@@ -345,13 +439,22 @@ class SmartCursorStable:
                  font=('Arial', 14, 'bold')).pack(pady=10)
 
         instructions = """
-1. Position camera so your face/hands fill the frame
-2. Ensure good lighting
-3. For hand mode: Hold up your hand
-4. For eye mode: Look straight at camera
-5. Click 'Start' and follow on-screen prompts
+1. Position camera so your tracking target fills the frame
+2. Ensure good lighting and clear background
+3. Select your preferred tracking type from the settings
+4. Adjust sensitivity slider for optimal detection
+5. Try multi-tracking for enhanced accuracy
+6. Click 'Start' and follow on-screen prompts
 
-Note: This is a basic calibration. Advanced features disabled for stability.
+Tracking Types:
+• Hand: Keep hand visible and open
+• Finger: Point with index finger
+• Head: Keep face centered
+• Eye: Look at different screen areas
+• Pose/Body: Upper body should be visible
+• Multi: Combine multiple tracking methods
+
+Note: This is a basic calibration. Advanced features available in settings.
         """
 
         text_widget = scrolledtext.ScrolledText(calibration_window, wrap=tk.WORD, height=10)
@@ -394,6 +497,11 @@ System Status:
 - Camera: {'Available' if self.cap and self.cap.isOpened() else 'Not Available'}
 - MediaPipe: {'Available' if self.holistic else 'Not Available'}
 
+Tracking Configuration:
+- Tracking Type: {self.settings['tracking_type']}
+- Tracking Sensitivity: {self.settings['tracking_sensitivity']:.1f}
+- Multi-Tracking: {'Enabled' if self.settings['multi_tracking'] else 'Disabled'}
+
 Performance (Legacy):
 - Average FPS: {avg_fps}
 - Detection Rate: {detection_rate}
@@ -423,23 +531,32 @@ Settings:
 Smart Cursor Control - High Performance Version
 
 BASIC USAGE:
-1. Choose a control mode (Hand Tracking recommended)
-2. Position yourself in front of the camera
-3. The system will show your camera feed with performance stats
-4. Your cursor will move based on hand/eye position
+1. Choose a tracking type (Hand Tracking recommended)
+2. Adjust sensitivity for your needs
+3. Position yourself in front of the camera
+4. The system will show your camera feed with performance stats
+5. Your cursor will move based on selected tracking method
+
+TRACKING TYPES:
+• Hand: Track hand/wrist movement
+• Finger: Precise index finger tracking
+• Head: Track head/nose movement
+• Eye: Track eye gaze direction
+• Pose/Body: Track upper body/shoulders
+• Multi-Tracking: Combine multiple tracking methods
 
 NEW FEATURES:
+• Multiple tracking types with customizable sensitivity
+• Multi-tracking mode for enhanced accuracy
 • Gesture-based clicking: Pinch for left-click, fist for right-click
 • Advanced Kalman filtering for smooth cursor movement
 • Multi-threaded processing for better performance
 • Real-time performance monitoring
-• Index finger tracking for precision control
 
-MODES:
-• Hand Tracking: Use hand gestures to control cursor
-• Eye Tracking: Use eye gaze (experimental)
-• Gaming: Enhanced for games
-• Typing: Steady for text input
+TRACKING CONTROLS:
+• Tracking Type: Select from 6 different tracking methods
+• Sensitivity: Adjust detection sensitivity (0.1-1.0)
+• Multi-Tracking: Combine multiple tracking types for better accuracy
 
 CONTROLS:
 • Press 'Q' in camera window to quit
@@ -458,6 +575,7 @@ TROUBLESHOOTING:
 • If detection fails: Improve lighting, check camera position
 • If system is slow: Close other applications
 • Gestures not working: Ensure hand is clearly visible
+• Tracking not accurate: Adjust sensitivity or try different tracking type
 
 SAFETY:
 • Mouse control can be disabled for safety
