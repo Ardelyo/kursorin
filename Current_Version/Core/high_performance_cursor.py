@@ -16,31 +16,8 @@ from collections import deque
 from typing import Tuple, Optional, List
 import math
 
-class KalmanFilter:
-    """Simple Kalman filter for cursor smoothing"""
-    def __init__(self, process_noise=0.01, measurement_noise=0.1):
-        self.process_noise = process_noise
-        self.measurement_noise = measurement_noise
-        self.estimated = np.array([0.0, 0.0])
-        self.estimate_error = np.array([1.0, 1.0])
-        self.first_measurement = True
-
-    def update(self, measurement: np.ndarray) -> np.ndarray:
-        """Update filter with new measurement"""
-        if self.first_measurement:
-            self.estimated = measurement.copy()
-            self.first_measurement = False
-            return self.estimated
-
-        # Prediction step
-        prediction_error = self.estimate_error + self.process_noise
-
-        # Update step
-        kalman_gain = prediction_error / (prediction_error + self.measurement_noise)
-        self.estimated = self.estimated + kalman_gain * (measurement - self.estimated)
-        self.estimate_error = (1 - kalman_gain) * prediction_error
-
-        return self.estimated.copy()
+# Import cursor stabilizer
+from cursor_stabilizer import CursorStabilizer
 
 class GestureRecognizer:
     """Advanced gesture recognition for clicking"""
@@ -76,20 +53,33 @@ class GestureRecognizer:
             if thumb_index_dist < 0.05:
                 return "pinch"
 
-            # Fist gesture (all fingers curled)
+            # Check finger states (extended if tip.y < mcp.y)
+            fingers_extended = 0
             fingers_curled = 0
             finger_tips = [index_tip, middle_tip, ring_tip, pinky_tip]
             finger_mcps = [index_mcp, middle_mcp, ring_mcp, pinky_mcp]
 
             for tip, mcp in zip(finger_tips, finger_mcps):
-                if tip.y > mcp.y:  # Finger curled (tip below MCP)
+                if tip.y < mcp.y:  # Finger extended (tip above MCP)
+                    fingers_extended += 1
+                else:  # Finger curled
                     fingers_curled += 1
 
+            # Finger gesture (index finger extended, others curled)
+            index_extended = index_tip.y < index_mcp.y
+            other_fingers_curled = sum(1 for tip, mcp in zip([middle_tip, ring_tip, pinky_tip],
+                                                            [middle_mcp, ring_mcp, pinky_mcp])
+                                      if tip.y > mcp.y) >= 2
+
+            if index_extended and other_fingers_curled:
+                return "finger"
+
+            # Fist gesture (all fingers curled)
             if fingers_curled >= 3:
                 return "fist"
 
-            # Open palm (relaxed hand)
-            if fingers_curled <= 1:
+            # Open palm (most fingers extended)
+            if fingers_extended >= 3:
                 return "open"
 
         except Exception as e:
@@ -118,11 +108,10 @@ class GestureRecognizer:
                 return True
 
         return False
-
 class HighPerformanceCursor:
     """High-performance cursor control with optimized processing"""
 
-    def __init__(self, screen_width: int, screen_height: int):
+    def __init__(self, screen_width: int, screen_height: int, stabilizer_kwargs: dict = None):
         self.screen_width = screen_width
         self.screen_height = screen_height
 
@@ -135,8 +124,11 @@ class HighPerformanceCursor:
         )
         self.mp_draw = mp.solutions.drawing_utils
 
-        # Advanced filtering and smoothing
-        self.kalman_filter = KalmanFilter(process_noise=0.005, measurement_noise=0.05)
+        # Advanced filtering and smoothing (optimized for finger tracking)
+        if stabilizer_kwargs:
+            self.cursor_stabilizer = CursorStabilizer(**stabilizer_kwargs)
+        else:
+            self.cursor_stabilizer = CursorStabilizer(method='kalman', process_noise=0.003, measurement_noise=0.03)
 
         # Gesture recognition
         self.gesture_recognizer = GestureRecognizer()
@@ -204,6 +196,18 @@ class HighPerformanceCursor:
             logging.warning(f"Invalid multi-tracking value '{enabled}', using default False")
             self.multi_tracking = False
 
+    def set_stabilizer_method(self, method: str, **kwargs):
+        """Set the stabilizer method with parameters"""
+        try:
+            stabilizer_kwargs = {'method': method}
+            stabilizer_kwargs.update(kwargs)
+            self.cursor_stabilizer = CursorStabilizer(**stabilizer_kwargs)
+            logging.info(f"Cursor stabilizer method changed to: {method}")
+        except Exception as e:
+            logging.error(f"Failed to set stabilizer method: {e}")
+            # Fallback to default
+            self.cursor_stabilizer = CursorStabilizer(method='kalman', process_noise=0.003, measurement_noise=0.03)
+
     def process_frame_async(self, frame: np.ndarray) -> Tuple[np.ndarray, bool, Optional[str]]:
         """Process frame asynchronously"""
         if not self.running:
@@ -222,9 +226,11 @@ class HighPerformanceCursor:
 
         except queue.Empty:
             pass
+        except Exception as e:
+            logging.error(f"Error in process_frame_async: {e}")
 
-        # Return last known position if no new result
-        return self.cursor_position, False, None
+        # Return None if no new result is available
+        return None, False, None
 
     def _processing_loop(self):
         """Main processing loop in separate thread with enhanced error handling"""
@@ -335,14 +341,14 @@ class HighPerformanceCursor:
             # Single tracking mode
             cursor_pos, detection_found = self._get_tracking_position(self.tracking_type, results)
 
-        # Apply Kalman filtering for smooth movement if detection found
+        # Apply cursor stabilization for smooth movement if detection found
         if detection_found:
             try:
                 measurement = np.array(cursor_pos, dtype=np.float32)
-                filtered_pos = self.kalman_filter.update(measurement)
+                filtered_pos = self.cursor_stabilizer.stabilize(measurement)
                 cursor_pos = filtered_pos.astype(int)
             except Exception as e:
-                logging.error(f"Kalman filter error: {e}")
+                logging.error(f"Cursor stabilization error: {e}")
 
         # Detect gestures if hand tracking is active
         if (results.right_hand_landmarks or results.left_hand_landmarks) and \
@@ -371,14 +377,19 @@ class HighPerformanceCursor:
                         return np.array([x, y]), self.tracking_sensitivity
 
             elif tracking_type == 'finger':
-                # Finger tracking using index finger tip
+                # Finger tracking using index finger tip (simplified for reliability)
                 hand_landmarks = getattr(results, 'right_hand_landmarks', None) or getattr(results, 'left_hand_landmarks', None)
                 if hand_landmarks and hasattr(hand_landmarks, 'landmark') and len(hand_landmarks.landmark) > 8:
                     index_tip = hand_landmarks.landmark[8]
+
                     if hasattr(index_tip, 'x') and hasattr(index_tip, 'y'):
+                        # Use index finger tip as cursor position - always track when visible
                         x = max(0, min(self.screen_width, int(index_tip.x * self.screen_width)))
                         y = max(0, min(self.screen_height, int(index_tip.y * self.screen_height)))
-                        return np.array([x, y]), self.tracking_sensitivity
+
+                        # Higher sensitivity for finger tracking since it's more precise
+                        finger_sensitivity = min(1.0, self.tracking_sensitivity * 1.2)
+                        return np.array([x, y]), finger_sensitivity
 
             elif tracking_type == 'head':
                 # Head tracking using nose tip
@@ -430,23 +441,32 @@ class HighPerformanceCursor:
 
     def handle_gesture_click(self, gesture: str) -> bool:
         """Handle gesture-based clicking"""
-        if not gesture:
-            return False
+        try:
+            if not gesture:
+                return False
 
-        current_time = time.time()
-        if current_time - self.last_click_time < self.click_cooldown:
-            return False
+            current_time = time.time()
+            if current_time - self.last_click_time < self.click_cooldown:
+                return False
 
-        if gesture == "pinch":
-            pyautogui.click()
-            self.last_click_time = current_time
-            logging.info("Gesture click: pinch")
-            return True
-        elif gesture == "fist":
-            pyautogui.rightClick()
-            self.last_click_time = current_time
-            logging.info("Gesture click: right-click (fist)")
-            return True
+            if gesture == "pinch":
+                pyautogui.click()
+                self.last_click_time = current_time
+                logging.info("Gesture click: pinch")
+                return True
+            elif gesture == "fist":
+                pyautogui.rightClick()
+                self.last_click_time = current_time
+                logging.info("Gesture click: right-click (fist)")
+                return True
+            elif gesture == "finger":
+                pyautogui.click()
+                self.last_click_time = current_time
+                logging.info("Gesture click: finger")
+                return True
+
+        except Exception as e:
+            logging.error(f"Error in handle_gesture_click: {e}")
 
         return False
 
@@ -466,27 +486,27 @@ class HighPerformanceCursor:
         }
 
     def draw_overlays(self, frame: np.ndarray, cursor_pos: np.ndarray,
-                     detection_found: bool, gesture: Optional[str]):
+                      detection_found: bool, gesture: Optional[str]):
         """Draw performance and control overlays"""
         try:
             # Performance stats
             stats = self.get_performance_stats()
             cv2.putText(frame, f"FPS: {stats['fps']:.1f}", (10, 30),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
             cv2.putText(frame, f"Latency: {stats['latency_ms']:.1f}ms", (10, 55),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
             cv2.putText(frame, f"Detection: {stats['detection_rate']:.1f}%", (10, 80),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
 
             # Detection status
             color = (0, 255, 0) if detection_found else (0, 0, 255)
             cv2.putText(frame, f"Detection: {'OK' if detection_found else 'NONE'}", (10, 105),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
             # Gesture status
             if gesture:
                 cv2.putText(frame, f"Gesture: {gesture.upper()}", (10, 130),
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
 
             # Tracking type and sensitivity
             tracking_info = f"Tracking: {self.tracking_type.upper()}"

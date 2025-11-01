@@ -37,6 +37,7 @@ class SmartCursorStable:
         self.running = False
         self.current_mode = "normal"
         self.gui = None
+        self.lock = threading.Lock()
 
         # Safe settings with fallbacks
         self.settings = {
@@ -46,9 +47,13 @@ class SmartCursorStable:
             'sound_feedback': True,
             'gesture_recognition': True,
             'adaptive_speed': False,  # Disable by default
-            'tracking_type': 'hand',  # Options: 'hand', 'head', 'eye', 'pose', 'finger', 'body'
+            'tracking_type': 'finger',  # Options: 'hand', 'head', 'eye', 'pose', 'finger', 'body'
             'tracking_sensitivity': 0.8,  # 0.1 to 1.0
-            'multi_tracking': False  # Allow multiple tracking types simultaneously
+            'multi_tracking': False,  # Allow multiple tracking types simultaneously
+            'stabilizer_method': 'kalman',  # Options: 'kalman', 'ema', 'none'
+            'stabilizer_alpha': 0.7,  # For EMA method
+            'stabilizer_process_noise': 0.003,  # For Kalman method
+            'stabilizer_measurement_noise': 0.03  # For Kalman method
         }
 
         # Load settings safely
@@ -57,8 +62,14 @@ class SmartCursorStable:
         # Initialize components with error handling
         self.initialize_components_safely()
 
-        # Initialize high-performance cursor layer
-        self.hp_cursor = HighPerformanceCursor(self.screen_width, self.screen_height)
+        # Initialize high-performance cursor layer with stabilizer settings
+        stabilizer_kwargs = {
+            'method': self.settings['stabilizer_method'],
+            'alpha': self.settings['stabilizer_alpha'],
+            'process_noise': self.settings['stabilizer_process_noise'],
+            'measurement_noise': self.settings['stabilizer_measurement_noise']
+        }
+        self.hp_cursor = HighPerformanceCursor(self.screen_width, self.screen_height, stabilizer_kwargs=stabilizer_kwargs)
 
         # Performance tracking
         self.fps_history = deque(maxlen=30)
@@ -91,7 +102,8 @@ class SmartCursorStable:
                 valid_keys = {
                     'smoothing', 'dwell_time', 'voice_feedback', 'sound_feedback',
                     'gesture_recognition', 'adaptive_speed', 'tracking_type',
-                    'tracking_sensitivity', 'multi_tracking'
+                    'tracking_sensitivity', 'multi_tracking', 'stabilizer_method',
+                    'stabilizer_alpha', 'stabilizer_process_noise', 'stabilizer_measurement_noise'
                 }
 
                 for key, value in loaded_settings.items():
@@ -108,6 +120,15 @@ class SmartCursorStable:
                                 self.settings[key] = float(value)
                         elif key in ['smoothing', 'dwell_time']:
                             if isinstance(value, (int, float)) and value > 0:
+                                self.settings[key] = float(value)
+                        elif key == 'stabilizer_method':
+                            if isinstance(value, str) and value in ['kalman', 'ema', 'none']:
+                                self.settings[key] = value
+                        elif key == 'stabilizer_alpha':
+                            if isinstance(value, (int, float)) and 0.1 <= value <= 1.0:
+                                self.settings[key] = float(value)
+                        elif key in ['stabilizer_process_noise', 'stabilizer_measurement_noise']:
+                            if isinstance(value, (int, float)) and value >= 0:
                                 self.settings[key] = float(value)
 
                 logging.info("Settings loaded successfully")
@@ -216,8 +237,8 @@ class SmartCursorStable:
                                font=('Arial', 16, 'bold'))
         title_label.pack(pady=10)
 
-        subtitle_label = ttk.Label(self.gui, text="High Performance Version with Gesture Control",
-                                  font=('Arial', 10))
+        subtitle_label = ttk.Label(self.gui, text="High Performance Version with Advanced Finger Tracking & Gestures",
+        font=('Arial', 10))
         subtitle_label.pack(pady=(0, 20))
 
         # Status section
@@ -245,10 +266,10 @@ class SmartCursorStable:
 
         # Mode buttons
         modes = [
-            ("👁️ Eye Tracking", "eye_tracking"),
-            ("🖐️ Hand Tracking", "normal"),
-            ("🎯 Gaming", "gaming"),
-            ("⌨️ Typing", "typing")
+        ("👆 Finger Tracking", "normal"),  # Default mode now uses finger tracking
+        ("👁️ Eye Tracking", "eye_tracking"),
+        ("🎯 Gaming", "gaming"),
+        ("⌨️ Typing", "typing")
         ]
 
         button_frame = ttk.Frame(control_frame)
@@ -315,8 +336,29 @@ class SmartCursorStable:
         ttk.Label(multi_frame, text="Multi-Tracking:").pack(side=tk.LEFT)
         self.multi_var = tk.BooleanVar(value=self.settings['multi_tracking'])
         ttk.Checkbutton(multi_frame, text="Enable",
-                        variable=self.multi_var,
-                        command=self.toggle_multi_tracking).pack(side=tk.RIGHT)
+        variable=self.multi_var,
+        command=self.toggle_multi_tracking).pack(side=tk.RIGHT)
+
+        # Stabilizer method selector
+        stabilizer_frame = ttk.Frame(settings_frame)
+        stabilizer_frame.pack(fill=tk.X, pady=5)
+        ttk.Label(stabilizer_frame, text="Stabilizer Method:").pack(side=tk.LEFT)
+        self.stabilizer_var = tk.StringVar(value=self.settings['stabilizer_method'])
+        stabilizer_combo = ttk.Combobox(stabilizer_frame, textvariable=self.stabilizer_var,
+                                       values=['kalman', 'ema', 'none'],
+                                       state='readonly', width=10)
+        stabilizer_combo.pack(side=tk.RIGHT)
+        stabilizer_combo.bind('<<ComboboxSelected>>', self.set_stabilizer_method)
+
+        # Stabilizer alpha slider (for EMA)
+        alpha_frame = ttk.Frame(settings_frame)
+        alpha_frame.pack(fill=tk.X, pady=5)
+        ttk.Label(alpha_frame, text="EMA Alpha:").pack(side=tk.LEFT)
+        self.alpha_scale = tk.Scale(alpha_frame, from_=0.1, to=1.0,
+                                   resolution=0.1, orient=tk.HORIZONTAL,
+                                   command=self.set_stabilizer_alpha)
+        self.alpha_scale.set(self.settings['stabilizer_alpha'])
+        self.alpha_scale.pack(side=tk.RIGHT, fill=tk.X, expand=True)
 
         # Action buttons
         action_frame = ttk.Frame(self.gui)
@@ -429,6 +471,24 @@ class SmartCursorStable:
         if hasattr(self, 'hp_cursor'):
             self.hp_cursor.set_multi_tracking(self.settings['multi_tracking'])
 
+    def set_stabilizer_method(self, event=None):
+        """Set stabilizer method"""
+        self.settings['stabilizer_method'] = self.stabilizer_var.get()
+        logging.info(f"Stabilizer method changed to: {self.settings['stabilizer_method']}")
+        # Update high-performance cursor stabilizer
+        if hasattr(self, 'hp_cursor'):
+            self.hp_cursor.set_stabilizer_method(self.settings['stabilizer_method'],
+                                               alpha=self.settings['stabilizer_alpha'],
+                                               process_noise=self.settings['stabilizer_process_noise'],
+                                               measurement_noise=self.settings['stabilizer_measurement_noise'])
+
+    def set_stabilizer_alpha(self, value):
+        """Set stabilizer alpha for EMA"""
+        self.settings['stabilizer_alpha'] = float(value)
+        # Update if EMA is selected
+        if self.settings['stabilizer_method'] == 'ema' and hasattr(self, 'hp_cursor'):
+            self.hp_cursor.set_stabilizer_method('ema', alpha=self.settings['stabilizer_alpha'])
+
     def start_calibration(self):
         """Start calibration wizard"""
         calibration_window = tk.Toplevel(self.gui)
@@ -447,8 +507,8 @@ class SmartCursorStable:
 6. Click 'Start' and follow on-screen prompts
 
 Tracking Types:
+• Finger: Point with index finger extended (recommended)
 • Hand: Keep hand visible and open
-• Finger: Point with index finger
 • Head: Keep face centered
 • Eye: Look at different screen areas
 • Pose/Body: Upper body should be visible
@@ -502,6 +562,12 @@ Tracking Configuration:
 - Tracking Sensitivity: {self.settings['tracking_sensitivity']:.1f}
 - Multi-Tracking: {'Enabled' if self.settings['multi_tracking'] else 'Disabled'}
 
+Stabilizer Configuration:
+- Method: {self.settings['stabilizer_method']}
+- EMA Alpha: {self.settings['stabilizer_alpha']:.1f}
+- Kalman Process Noise: {self.settings['stabilizer_process_noise']:.4f}
+- Kalman Measurement Noise: {self.settings['stabilizer_measurement_noise']:.4f}
+
 Performance (Legacy):
 - Average FPS: {avg_fps}
 - Detection Rate: {detection_rate}
@@ -531,15 +597,15 @@ Settings:
 Smart Cursor Control - High Performance Version
 
 BASIC USAGE:
-1. Choose a tracking type (Hand Tracking recommended)
+1. Choose a tracking type (Finger Tracking recommended for precision)
 2. Adjust sensitivity for your needs
 3. Position yourself in front of the camera
 4. The system will show your camera feed with performance stats
 5. Your cursor will move based on selected tracking method
 
 TRACKING TYPES:
+• Finger: Precise index finger tip tracking (recommended, default)
 • Hand: Track hand/wrist movement
-• Finger: Precise index finger tracking
 • Head: Track head/nose movement
 • Eye: Track eye gaze direction
 • Pose/Body: Track upper body/shoulders
@@ -548,7 +614,7 @@ TRACKING TYPES:
 NEW FEATURES:
 • Multiple tracking types with customizable sensitivity
 • Multi-tracking mode for enhanced accuracy
-• Gesture-based clicking: Pinch for left-click, fist for right-click
+• Gesture-based clicking: Finger point for left-click, pinch for left-click, fist for right-click
 • Advanced Kalman filtering for smooth cursor movement
 • Multi-threaded processing for better performance
 • Real-time performance monitoring
@@ -562,7 +628,7 @@ CONTROLS:
 • Press 'Q' in camera window to quit
 • Use GUI buttons to change modes
 • Enable/disable mouse control as needed
-• Gestures override dwell clicking when detected
+• Gestures override dwell clicking when detected\n• Finger pointing provides precise cursor control
 
 PERFORMANCE:
 • Optimized MediaPipe settings for speed
@@ -590,20 +656,22 @@ For issues: Check the system log or contact support.
 
     def stop_system(self):
         """Stop the cursor control system"""
-        self.running = False
+        with self.lock:
+            self.running = False
         if self.gui:
             self.gui.quit()
 
     def run_system(self):
         """Main system loop"""
-        self.running = True
+        with self.lock:
+            self.running = True
 
         # Start high-performance cursor processing
         self.hp_cursor.start_processing()
 
         # Create GUI in separate thread
-        gui_thread = threading.Thread(target=self.create_control_panel, daemon=True)
-        gui_thread.start()
+        self.gui_thread = threading.Thread(target=self.create_control_panel, daemon=True)
+        self.gui_thread.start()
 
         # Wait for GUI to initialize
         time.sleep(1)
@@ -628,7 +696,10 @@ For issues: Check the system log or contact support.
                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (200, 200, 200), 2)
 
         try:
-            while self.running:
+            while True:
+                with self.lock:
+                    if not self.running:
+                        break
                 start_time = time.time()
 
                 if self.camera_available:
@@ -643,18 +714,36 @@ For issues: Check the system log or contact support.
                     success = True
 
                 # Use high-performance cursor processing
-                cursor_pos, detection_found, gesture = self.hp_cursor.process_frame_async(img)
+                result = self.hp_cursor.process_frame_async(img)
+                if result is None:
+                    time.sleep(0.01)  # Add a small delay to prevent busy-waiting
+                    continue
+
+                cursor_pos, detection_found, gesture = result
+                if cursor_pos is None:
+                    time.sleep(0.01)
+                    continue
                 cursor_x, cursor_y = int(float(cursor_pos[0])), int(float(cursor_pos[1]))
 
-                # Handle gesture-based clicking (new feature)
+                # Handle cursor movement (always when detected)
+                if self.mouse_enabled and detection_found:
+                    try:
+                        # Move cursor to finger position
+                        pyautogui.moveTo(cursor_x, cursor_y)
+                        self.last_mouse_move = time.time()
+                    except Exception as e:
+                        logging.error(f"Cursor movement error: {e}")
+                        self.mouse_enabled = False
+
+                # Handle gesture-based clicking (when gesture detected)
                 if self.mouse_enabled and gesture:
                     gesture_clicked = self.hp_cursor.handle_gesture_click(gesture)
                     if gesture_clicked:
                         logging.info(f"Gesture click performed: {gesture}")
 
-                # Handle legacy dwell clicking if no gesture
-                elif self.mouse_enabled and not gesture:
-                    self.handle_mouse_control(cursor_x, cursor_y, detection_found)
+                # Handle legacy dwell clicking only when no gesture and cursor is stationary
+                elif self.mouse_enabled and not gesture and detection_found:
+                    self.handle_mouse_control(cursor_x, cursor_y, detection_found, move_cursor=False)
 
                 # Update display with high-performance overlays
                 self.update_display_hp(img, cursor_pos, detection_found, gesture)
@@ -764,13 +853,14 @@ For issues: Check the system log or contact support.
 
         return prev_x, prev_y, False
 
-    def handle_mouse_control(self, cursor_x, cursor_y, detection_found):
+    def handle_mouse_control(self, cursor_x, cursor_y, detection_found, move_cursor=True):
         """Handle mouse control with safety measures"""
         if detection_found:
             try:
-                # Move cursor
-                pyautogui.moveTo(cursor_x, cursor_y)
-                self.last_mouse_move = time.time()
+                # Move cursor (if requested)
+                if move_cursor:
+                    pyautogui.moveTo(cursor_x, cursor_y)
+                    self.last_mouse_move = time.time()
 
                 # Handle clicking (simplified)
                 if self.settings['dwell_time'] > 0:
@@ -844,6 +934,12 @@ For issues: Check the system log or contact support.
 
         if self.holistic:
             self.holistic.close()
+
+        if hasattr(self, 'gui_thread') and self.gui_thread.is_alive():
+            self.gui_thread.join(timeout=1)
+
+        if hasattr(self, 'update_status_thread') and self.update_status_thread.is_alive():
+            self.update_status_thread.join(timeout=1)
 
         print("Smart Cursor High Performance System shutdown complete")
 

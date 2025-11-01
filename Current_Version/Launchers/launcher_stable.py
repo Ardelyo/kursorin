@@ -104,7 +104,7 @@ class StableLauncher:
     def create_ui(self):
         """Create the launcher UI"""
         # Title
-        title_label = ttk.Label(self.root, text="🖱️ Smart Cursor Control",
+        title_label = ttk.Label(self.root, text="Smart Cursor Control",
                                font=('Arial', 16, 'bold'))
         title_label.pack(pady=10)
 
@@ -135,19 +135,19 @@ class StableLauncher:
         buttons_frame = ttk.Frame(self.root)
         buttons_frame.pack(fill=tk.X, padx=20)
 
-        self.install_button = ttk.Button(buttons_frame, text="📦 Install Dependencies",
+        self.install_button = ttk.Button(buttons_frame, text="Install Dependencies",
                                         command=self.install_dependencies)
         self.install_button.pack(fill=tk.X, pady=(0, 5))
 
-        self.launch_button = ttk.Button(buttons_frame, text="🚀 Launch Smart Cursor",
+        self.launch_button = ttk.Button(buttons_frame, text="Launch Smart Cursor",
                                        command=self.launch_system, state=tk.DISABLED)
         self.launch_button.pack(fill=tk.X, pady=(0, 5))
 
-        self.demo_button = ttk.Button(buttons_frame, text="🎯 Run Demo Mode",
+        self.demo_button = ttk.Button(buttons_frame, text="Run Demo Mode",
                                      command=self.run_demo, state=tk.DISABLED)
         self.demo_button.pack(fill=tk.X, pady=(0, 5))
 
-        ttk.Button(buttons_frame, text="❌ Exit", command=self.root.quit).pack(fill=tk.X)
+        ttk.Button(buttons_frame, text="Exit", command=self.root.quit).pack(fill=tk.X)
 
         # Log initial status
         self.log_message("Launcher started. Checking system...")
@@ -229,58 +229,47 @@ class StableLauncher:
         # Check Python version (cached)
         is_valid_python, version_str = self._check_python_version()
         if not is_valid_python:
-            self.log_message("❌ ERROR: Python 3.8+ required. Current: " + version_str, "ERROR")
+            self.log_message("[ERROR]: Python 3.8+ required. Current: " + version_str, "ERROR")
             messagebox.showerror("Python Version Error",
                                f"Python 3.8+ required. You have: {version_str}\n\nPlease install Python 3.8 or higher.")
             return False
 
-        self.log_message("✅ Python version OK: " + version_str)
+        self.log_message("[SUCCESS] Python version OK: " + version_str)
 
         # Check for pip (cached)
         if not self._check_pip():
-            self.log_message("❌ ERROR: Pip not available", "ERROR")
+            self.log_message("[ERROR]: Pip not available", "ERROR")
             messagebox.showerror("Pip Error", "Pip is not installed. Please install pip first.")
             return False
 
-        self.log_message("✅ Pip available")
+        self.log_message("[SUCCESS] Pip available")
 
         # Check system health before dependency checks
         health = self.performance_monitor.check_system_health()
         if not health.get('healthy', True):
-            self.log_message(f"⚠️  System under load (CPU: {health.get('avg_cpu', 0):.1f}%, Memory: {health.get('avg_memory', 0):.1f}%)", "WARNING")
+            self.log_message(f"[WARNING] System under load (CPU: {health.get('avg_cpu', 0):.1f}%, Memory: {health.get('avg_memory', 0):.1f}%)", "WARNING")
 
-        # Check essential dependencies with parallel processing for performance
+        # Check essential dependencies sequentially for stability
         self.log_message("Checking essential dependencies...")
         essential_deps = ['cv2', 'mediapipe', 'pyautogui', 'PIL', 'numpy', 'mss']
 
         missing_deps = []
         available_deps = []
 
-        # Use threading for dependency checks to improve performance
-        def check_dep(dep):
+        for dep in essential_deps:
             if self._check_dependency_with_retry(dep):
                 available_deps.append(dep)
-                self.log_message(f"✅ {dep} available")
+                self.log_message(f"[SUCCESS] {dep} available")
             else:
                 missing_deps.append(dep)
-                self.log_message(f"❌ {dep} missing", "WARNING")
-
-        threads = []
-        for dep in essential_deps:
-            thread = threading.Thread(target=check_dep, args=(dep,), daemon=True)
-            threads.append(thread)
-            thread.start()
-
-        # Wait for all checks to complete with timeout
-        for thread in threads:
-            thread.join(timeout=5.0)
+                self.log_message(f"[ERROR] {dep} missing", "WARNING")
 
         if missing_deps:
-            self.log_message(f"⚠️  Missing dependencies: {', '.join(missing_deps)}", "WARNING")
+            self.log_message(f"[WARNING] Missing dependencies: {', '.join(missing_deps)}", "WARNING")
             self.install_button.config(state=tk.NORMAL)
             return False
         else:
-            self.log_message("✅ All essential dependencies available")
+            self.log_message("[SUCCESS] All essential dependencies available")
             self.launch_button.config(state=tk.NORMAL)
             self.demo_button.config(state=tk.NORMAL)
             return True
@@ -305,7 +294,7 @@ class StableLauncher:
                 # Check system health before installation
                 health = self.performance_monitor.check_system_health()
                 if not health.get('healthy', True):
-                    self.log_message(f"⚠️  System under high load, installation may be slow", "WARNING")
+                    self.log_message(f"[WARNING] System under high load, installation may be slow", "WARNING")
 
                 self.progress_var.set(0)
                 self.progress_label.config(text="Preparing installation...")
@@ -330,7 +319,7 @@ class StableLauncher:
                 if success:
                     self.progress_var.set(100)
                     self.progress_label.config(text="Installation complete!")
-                    self.log_message("✅ Dependencies installed successfully!")
+                    self.log_message("[SUCCESS] Dependencies installed successfully!")
                     messagebox.showinfo("Success", "Dependencies installed successfully!\n\nClick 'Launch Smart Cursor' to start.")
 
                     # Clear caches and re-check system
@@ -339,20 +328,20 @@ class StableLauncher:
                     self.root.after(1000, lambda: self.check_system())
 
                 else:
-                    self.log_message("❌ Installation failed after retries", "ERROR")
+                    self.log_message("[ERROR] Installation failed after retries", "ERROR")
                     messagebox.showerror("Installation Failed", "Failed to install dependencies after multiple attempts.")
                     self.install_button.config(state=tk.NORMAL)
 
             except FileNotFoundError as e:
-                self.log_message(f"❌ Requirements file error: {e}", "ERROR")
+                self.log_message(f"[ERROR] Requirements file error: {e}", "ERROR")
                 messagebox.showerror("File Error", f"Requirements file not found:\n{str(e)}")
                 self.install_button.config(state=tk.NORMAL)
             except subprocess.TimeoutExpired:
-                self.log_message("❌ Installation timed out", "ERROR")
+                self.log_message("[ERROR] Installation timed out", "ERROR")
                 messagebox.showerror("Timeout", "Installation took too long. Please try again or check your internet connection.")
                 self.install_button.config(state=tk.NORMAL)
             except Exception as e:
-                self.log_message(f"❌ Installation error: {e}", "ERROR")
+                self.log_message(f"[ERROR] Installation error: {e}", "ERROR")
                 messagebox.showerror("Error", f"Installation failed: {e}")
                 self.install_button.config(state=tk.NORMAL)
 
@@ -394,7 +383,7 @@ class StableLauncher:
                 # Check system health before launch
                 health = self.performance_monitor.check_system_health()
                 if not health.get('healthy', True):
-                    self.log_message(f"⚠️  Launching under high system load", "WARNING")
+                    self.log_message(f"[WARNING] Launching under high system load", "WARNING")
 
                 self.log_message("Launching Smart Cursor system with stability monitoring...")
                 self.root.withdraw()  # Hide launcher
@@ -438,18 +427,18 @@ class StableLauncher:
                     pass  # UI already destroyed
 
                 if return_code == 0:
-                    self.log_message("✅ System closed normally")
+                    self.log_message("[SUCCESS] System closed normally")
                 elif return_code is None:
-                    self.log_message("⚠️  System terminated by launcher")
+                    self.log_message("[WARNING] System terminated by launcher")
                 else:
-                    self.log_message(f"⚠️  System exited with code: {return_code}", "WARNING")
+                    self.log_message(f"[WARNING] System exited with code: {return_code}", "WARNING")
                     if stderr:
                         self.log_message(f"Error output: {stderr[:200]}...", "ERROR")
 
                 return return_code
 
             except subprocess.TimeoutExpired:
-                self.log_message("⚠️  System launch timed out", "WARNING")
+                self.log_message("[WARNING] System launch timed out", "WARNING")
                 try:
                     self.root.deiconify()
                 except tk.TclError:
@@ -457,7 +446,7 @@ class StableLauncher:
                 messagebox.showwarning("Timeout", "System launch timed out. It may still be running.")
                 return -1
             except Exception as e:
-                self.log_message(f"❌ Launch failed: {e}", "ERROR")
+                self.log_message(f"[ERROR] Launch failed: {e}", "ERROR")
                 try:
                     self.root.deiconify()
                 except tk.TclError:
@@ -478,7 +467,7 @@ class StableLauncher:
                 # Check system health before demo
                 health = self.performance_monitor.check_system_health()
                 if not health.get('healthy', True):
-                    self.log_message(f"⚠️  Running demo under high system load", "WARNING")
+                    self.log_message(f"[WARNING] Running demo under high system load", "WARNING")
 
                 self.log_message("Starting demo mode with stability monitoring...")
                 self.root.withdraw()
@@ -521,11 +510,11 @@ class StableLauncher:
                     pass
 
                 if return_code == 0:
-                    self.log_message("✅ Demo completed successfully")
+                    self.log_message("[SUCCESS] Demo completed successfully")
                 elif return_code is None:
-                    self.log_message("⚠️  Demo terminated by launcher")
+                    self.log_message("[WARNING] Demo terminated by launcher")
                 else:
-                    self.log_message(f"⚠️  Demo exited with code: {return_code}", "WARNING")
+                    self.log_message(f"[WARNING] Demo exited with code: {return_code}", "WARNING")
                     if stderr:
                         self.log_message(f"Demo error: {stderr[:150]}...", "ERROR")
 
@@ -534,14 +523,14 @@ class StableLauncher:
                     self.root.deiconify()
                 except tk.TclError:
                     pass
-                self.log_message(f"❌ Demo file error: {e}", "ERROR")
+                self.log_message(f"[ERROR] Demo file error: {e}", "ERROR")
                 messagebox.showerror("Demo Error", f"Demo file not found: {str(e)}")
             except Exception as e:
                 try:
                     self.root.deiconify()
                 except tk.TclError:
                     pass
-                self.log_message(f"❌ Demo failed: {e}", "ERROR")
+                self.log_message(f"[ERROR] Demo failed: {e}", "ERROR")
                 messagebox.showerror("Demo Error", f"Demo failed: {e}")
 
         # Run demo in managed thread
