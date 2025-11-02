@@ -91,10 +91,10 @@ class GestureRecognizer:
                 middle_extended == False):  # Middle finger definitely curled
                 return "finger"
 
-            # 3. FIST: Most/all fingers curled, thumb tucked
+            # 3. REDESIGNED FIST AS PINCH: Most/all fingers curled, thumb tucked - now triggers pinch action
             if (curled_count >= 3 and  # At least 3 fingers curled
                 not thumb_extended):  # Thumb tucked
-                return "fist"
+                return "pinch"
 
             # 4. OPEN PALM: Most fingers extended
             if extended_count >= 3:

@@ -189,13 +189,11 @@ class SmartCursorApplication:
     def _handle_gesture_action(self, gesture: str):
         """Handle gesture-based actions"""
         if gesture == "pinch":
-            self.cursor_controller.perform_click()
-        elif gesture == "fist":
-            self.cursor_controller.perform_click('right')
+            self.cursor_controller.perform_click()  # Now includes redesigned fist gesture
         elif gesture == "peace":
             self.cursor_controller.perform_double_click()
         elif gesture == "open":
-            # Could implement drag or other actions
+        # Could implement drag or other actions
             pass
 
     def _update_display(self, frame: np.ndarray, cursor_pos: Tuple[int, int],
