@@ -663,21 +663,33 @@ For issues: Check the system log or contact support.
 
     def run_system(self):
         """Main system loop"""
-        with self.lock:
-            self.running = True
+        try:
+            logging.info("Starting Smart Cursor system...")
+            with self.lock:
+                self.running = True
 
-        # Start high-performance cursor processing
-        self.hp_cursor.start_processing()
+            # Start high-performance cursor processing
+            logging.info("Initializing cursor processing...")
+            self.hp_cursor.start_processing()
 
-        # Create GUI in separate thread
-        self.gui_thread = threading.Thread(target=self.create_control_panel, daemon=True)
-        self.gui_thread.start()
+            # Create GUI in separate thread
+            logging.info("Starting GUI...")
+            self.gui_thread = threading.Thread(target=self.create_control_panel, daemon=True)
+            self.gui_thread.start()
 
-        # Wait for GUI to initialize
-        time.sleep(1)
+            # Wait for GUI to initialize
+            time.sleep(1)
 
-        # Start main processing loop
-        self.main_loop()
+            # Start main processing loop
+            logging.info("Starting main processing loop...")
+            self.main_loop()
+
+        except Exception as e:
+            logging.error(f"Critical error in run_system: {e}")
+            logging.error(f"Error type: {type(e).__name__}")
+            import traceback
+            logging.error(f"Traceback: {traceback.format_exc()}")
+            raise
 
     def main_loop(self):
         """Main processing loop"""
@@ -723,6 +735,12 @@ For issues: Check the system log or contact support.
                 if cursor_pos is None:
                     time.sleep(0.01)
                     continue
+
+                # Validate cursor_pos to prevent crash from malformed data
+                if not isinstance(cursor_pos, (list, tuple, np.ndarray)) or len(cursor_pos) < 2:
+                    logging.warning(f"Received malformed cursor_pos: {cursor_pos}. Skipping frame.")
+                    continue
+
                 cursor_x, cursor_y = int(float(cursor_pos[0])), int(float(cursor_pos[1]))
 
                 # Handle cursor movement (always when detected)

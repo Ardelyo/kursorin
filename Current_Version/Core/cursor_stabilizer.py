@@ -21,20 +21,32 @@ class KalmanFilter:
 
     def update(self, measurement: np.ndarray) -> np.ndarray:
         """Update filter with new measurement"""
-        if self.first_measurement:
-            self.estimated = measurement.copy()
-            self.first_measurement = False
-            return self.estimated
+        try:
+            if self.first_measurement:
+                self.estimated = measurement.copy()
+                self.first_measurement = False
+                return self.estimated
 
-        # Prediction step
-        prediction_error = self.estimate_error + self.process_noise
+            # Safety check for shape mismatch
+            if self.estimated.shape != measurement.shape:
+                logging.warning("Kalman filter shape mismatch. Resetting.")
+                self.estimated = measurement.copy()
+                return self.estimated
 
-        # Update step
-        kalman_gain = prediction_error / (prediction_error + self.measurement_noise)
-        self.estimated = self.estimated + kalman_gain * (measurement - self.estimated)
-        self.estimate_error = (1 - kalman_gain) * prediction_error
+            # Prediction step
+            prediction_error = self.estimate_error + self.process_noise
 
-        return self.estimated.copy()
+            # Update step
+            kalman_gain = prediction_error / (prediction_error + self.measurement_noise)
+            self.estimated = self.estimated + kalman_gain * (measurement - self.estimated)
+            self.estimate_error = (1 - kalman_gain) * prediction_error
+
+            return self.estimated.copy()
+        except Exception as e:
+            logging.error(f"Kalman filter update failed catastrophically: {e}. Resetting.")
+            # On any failure, reset and return the raw measurement
+            self.reset()
+            return measurement
 
     def reset(self):
         """Reset the filter state"""

@@ -348,7 +348,8 @@ class HighPerformanceCursor:
                     cursor_pos = weighted_pos.astype(int)
         else:
             # Single tracking mode
-            cursor_pos, detection_found = self._get_tracking_position(self.tracking_type, results)
+            cursor_pos, confidence = self._get_tracking_position(self.tracking_type, results)
+            detection_found = confidence > 0.1  # Use a threshold for detection
 
         # Apply cursor stabilization for smooth movement if detection found
         if detection_found:
