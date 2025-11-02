@@ -14,10 +14,10 @@ from pathlib import Path
 def check_python_version():
     """Check if Python version is compatible"""
     if sys.version_info < (3, 7):
-        print("❌ Python 3.7 or higher is required")
+        print("ERROR: Python 3.7 or higher is required")
         print(f"   Current version: {sys.version}")
         return False
-    print(f"✅ Python {sys.version.split()[0]}")
+    print(f"OK: Python {sys.version.split()[0]}")
     return True
 
 
@@ -44,13 +44,13 @@ def check_dependencies():
                 import PIL
             else:
                 __import__(package.replace('-', '_'))
-            print(f"✅ {package}")
+            print(f"OK: {package}")
         except ImportError:
             missing_packages.append(package)
-            print(f"❌ {package}")
+            print(f"MISSING: {package}")
 
     if missing_packages:
-        print(f"\n⚠️  Missing packages: {', '.join(missing_packages)}")
+        print(f"\nMissing packages: {', '.join(missing_packages)}")
         print("\nTo install missing packages, run:")
         print(f"pip install {' '.join(missing_packages)}")
         return False
@@ -67,12 +67,12 @@ def check_camera():
             ret, frame = cap.read()
             cap.release()
             if ret and frame is not None:
-                print("✅ Camera accessible")
+                print("OK: Camera accessible")
                 return True
-        print("❌ Camera not accessible")
+        print("WARNING: Camera not accessible")
         return False
     except Exception as e:
-        print(f"❌ Camera check failed: {e}")
+        print(f"ERROR: Camera check failed: {e}")
         return False
 
 
@@ -91,27 +91,23 @@ def setup_logging():
 def launch_application():
     """Launch the main application"""
     try:
-        print("\n🚀 Launching Smart Cursor Control...")
+        print("\\nLaunching Smart Cursor Control...")
 
-        # Add current directory to Python path
+        # Add the modules directory to Python path
         current_dir = Path(__file__).parent
-        core_dir = current_dir / "Core"
-        modules_dir = core_dir / "modules"
+        modules_dir = current_dir / "Core" / "modules"
 
         if str(modules_dir) not in sys.path:
             sys.path.insert(0, str(modules_dir))
 
         # Import and launch the application
-        from main_application import main
-        main()
+        import main_application
+        main_application.main()
 
-    except ImportError as e:
-        print(f"❌ Failed to import application modules: {e}")
-        print("Make sure you're running this from the Current_Version directory")
-        return False
     except Exception as e:
-        print(f"❌ Failed to launch application: {e}")
-        logging.error(f"Launch error: {e}")
+        print(f"ERROR: Failed to launch application: {e}")
+        import traceback
+        traceback.print_exc()
         return False
 
     return True
@@ -119,11 +115,11 @@ def launch_application():
 
 def main():
     """Main launcher function"""
-    print("🖱️  Smart Cursor Control - Modular Version")
+    print("Smart Cursor Control - Modular Version")
     print("=" * 50)
 
     # Check system requirements
-    print("\n📋 Checking system requirements...")
+    print("\\nChecking system requirements...")
 
     checks_passed = True
 
@@ -134,21 +130,21 @@ def main():
         checks_passed = False
 
     if not check_camera():
-        print("⚠️  Camera not accessible - application may not work properly")
+        print("WARNING: Camera not accessible - application may not work properly")
 
     if not checks_passed:
-        print("\n❌ System check failed. Please fix the issues above and try again.")
+        print("\\nERROR: System check failed. Please fix the issues above and try again.")
         input("Press Enter to exit...")
         return
 
-    print("\n✅ All checks passed!")
+    print("\\nSUCCESS: All checks passed!")
 
     # Setup logging
     setup_logging()
 
     # Launch application
     if not launch_application():
-        print("\n❌ Failed to launch application")
+        print("\\nERROR: Failed to launch application")
         input("Press Enter to exit...")
 
 

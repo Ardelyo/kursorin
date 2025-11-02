@@ -10,15 +10,15 @@ import time
 import threading
 import logging
 import sys
-from typing import Optional
+from typing import Optional, Tuple
 
 # Import our modular components
-from .settings_manager import SettingsManager
-from .gui_components import ControlPanel
-from .cursor_control import CursorController
-from .gesture_recognition import GestureRecognizer
-from .tracking_engines import TrackingEngineManager, TrackingType
-from .performance_optimizer import PerformanceOptimizer
+import settings_manager
+import gui_components
+import cursor_control
+import gesture_recognition
+import tracking_engines
+import performance_optimizer
 
 
 class SmartCursorApplication:
@@ -26,16 +26,16 @@ class SmartCursorApplication:
 
     def __init__(self):
         # Initialize settings first
-        self.settings_manager = SettingsManager()
+        self.settings_manager = settings_manager.SettingsManager()
 
         # Get screen dimensions
         self.screen_width, self.screen_height = self._get_screen_dimensions()
 
         # Initialize components
-        self.performance_optimizer = PerformanceOptimizer()
-        self.tracking_manager = TrackingEngineManager(self.screen_width, self.screen_height)
-        self.cursor_controller = CursorController(self.screen_width, self.screen_height)
-        self.gesture_recognizer = GestureRecognizer()
+        self.performance_optimizer = performance_optimizer.PerformanceOptimizer()
+        self.tracking_manager = tracking_engines.TrackingEngineManager(self.screen_width, self.screen_height)
+        self.cursor_controller = cursor_control.CursorController(self.screen_width, self.screen_height)
+        self.gesture_recognizer = gesture_recognition.GestureRecognizer()
 
         # Initialize MediaPipe
         self.mp_holistic = mp.solutions.holistic
@@ -102,7 +102,7 @@ class SmartCursorApplication:
             self.settings_manager.set(setting, value)
             self._apply_setting_change(setting, value)
 
-        self.gui = ControlPanel(
+        self.gui = gui_components.ControlPanel(
             self.settings_manager,
             on_mode_change=on_mode_change,
             on_setting_change=on_setting_change
@@ -116,15 +116,15 @@ class SmartCursorApplication:
 
         # Configure tracking based on mode
         if mode == "normal":
-            self.tracking_manager.set_tracking_type(TrackingType.FINGER)
+            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.FINGER)
             self.tracking_manager.set_multi_tracking(False)
         elif mode == "eye_tracking":
-            self.tracking_manager.set_tracking_type(TrackingType.EYE)
+            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.EYE)
         elif mode == "gaming":
-            self.tracking_manager.set_tracking_type(TrackingType.FINGER)
+            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.FINGER)
             self.tracking_manager.set_sensitivity(0.9)
         elif mode == "typing":
-            self.tracking_manager.set_tracking_type(TrackingType.HEAD)
+            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.HEAD)
             self.cursor_controller.set_smoothing_factor(0.8)
 
         logging.info(f"Mode changed to: {mode}")
