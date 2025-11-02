@@ -122,10 +122,11 @@ class SmartCursorApplication:
             self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.EYE)
         elif mode == "gaming":
             self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.FINGER)
-            self.tracking_manager.set_sensitivity(0.9)
+            self.tracking_manager.set_sensitivity(0.95)
+            self.cursor_controller.set_smoothing_factor(0.3)  # Less smoothing for faster response
         elif mode == "typing":
-            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.HEAD)
-            self.cursor_controller.set_smoothing_factor(0.8)
+            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.EYE)
+            self.cursor_controller.set_smoothing_factor(0.9)
 
         logging.info(f"Mode changed to: {mode}")
 

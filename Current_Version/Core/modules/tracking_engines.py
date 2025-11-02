@@ -127,7 +127,7 @@ class HeadTrackingEngine(TrackingEngine):
 
 
 class EyeTrackingEngine(TrackingEngine):
-    """Eye gaze tracking"""
+    """Eye gaze tracking using pupil position within eye region"""
 
     def process_frame(self, results: Any) -> Tuple[int, int, bool]:
         """Process eye tracking from MediaPipe face results"""
@@ -137,16 +137,50 @@ class EyeTrackingEngine(TrackingEngine):
         try:
             face_landmarks = results.face_landmarks
 
-            # Get eye landmarks
-            left_eye_center = face_landmarks.landmark[468]   # Left eye center
-            right_eye_center = face_landmarks.landmark[473]  # Right eye center
+            # Get left eye landmarks for gaze calculation
+            # Left eye corners and pupil center
+            left_eye_left_corner = face_landmarks.landmark[33]   # Left eye left corner
+            left_eye_right_corner = face_landmarks.landmark[133] # Left eye right corner
+            left_eye_top = face_landmarks.landmark[159]          # Left eye top
+            left_eye_bottom = face_landmarks.landmark[145]       # Left eye bottom
 
-            # Calculate average eye position
-            eye_x = (left_eye_center.x + right_eye_center.x) / 2
-            eye_y = (left_eye_center.y + right_eye_center.y) / 2
+            # Use iris center if available (MediaPipe Face Mesh with iris), otherwise use geometric center
+            try:
+                left_pupil = face_landmarks.landmark[468]  # Left iris center
+            except IndexError:
+                # Fallback to geometric center of left eye
+                left_pupil_x = (left_eye_left_corner.x + left_eye_right_corner.x) / 2
+                left_pupil_y = (left_eye_top.y + left_eye_bottom.y) / 2
+                left_pupil = type('Landmark', (), {'x': left_pupil_x, 'y': left_pupil_y})()
 
-            cursor_x = int(self.screen_width // 2)  # Center X for eye tracking
-            cursor_y = int(eye_y * self.screen_height)
+            # Calculate gaze direction based on pupil position relative to eye corners
+            # Horizontal gaze: pupil position between left and right eye corners
+            eye_width = abs(left_eye_right_corner.x - left_eye_left_corner.x)
+            if eye_width > 0:
+                # Normalize pupil position within eye (0 = looking left, 1 = looking right)
+                gaze_x_ratio = (left_pupil.x - left_eye_left_corner.x) / eye_width
+                # Clamp to reasonable range (pupil shouldn't be outside eye boundaries)
+                gaze_x_ratio = max(0.1, min(0.9, gaze_x_ratio))
+            else:
+                gaze_x_ratio = 0.5
+
+            # Vertical gaze: pupil position between top and bottom eye
+            eye_height = abs(left_eye_bottom.y - left_eye_top.y)
+            if eye_height > 0:
+                gaze_y_ratio = (left_pupil.y - left_eye_top.y) / eye_height
+                gaze_y_ratio = max(0.1, min(0.9, gaze_y_ratio))
+            else:
+                gaze_y_ratio = 0.5
+
+            # Convert gaze ratios to screen coordinates with sensitivity scaling
+            cursor_x = int(gaze_x_ratio * self.screen_width * self.sensitivity +
+                          (self.screen_width // 2) * (1 - self.sensitivity))
+            cursor_y = int(gaze_y_ratio * self.screen_height * self.sensitivity +
+                          (self.screen_height // 2) * (1 - self.sensitivity))
+
+            # Ensure cursor stays within screen bounds
+            cursor_x = max(0, min(self.screen_width - 1, cursor_x))
+            cursor_y = max(0, min(self.screen_height - 1, cursor_y))
 
             return cursor_x, cursor_y, True
 
