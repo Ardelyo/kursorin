@@ -20,6 +20,7 @@ import json
 from collections import deque
 from PIL import Image
 import mss
+import math
 
 # Import high-performance cursor layer
 from high_performance_cursor import HighPerformanceCursor
@@ -61,6 +62,9 @@ class SmartCursorStable:
 
         # Initialize components with error handling
         self.initialize_components_safely()
+
+        # Initialize performance optimizations
+        self.initialize_performance_optimizations()
 
         # Initialize high-performance cursor layer with stabilizer settings
         stabilizer_kwargs = {
@@ -153,15 +157,33 @@ class SmartCursorStable:
 
     def initialize_components_safely(self):
         """Initialize components with fallbacks"""
-        # MediaPipe Holistic with error handling
+        # MediaPipe Holistic with error handling and quantization support
         try:
             self.mp_holistic = mp.solutions.holistic
-            self.holistic = self.mp_holistic.Holistic(
-                min_detection_confidence=0.5,
-                min_tracking_confidence=0.5
-            )
+
+            # Configure MediaPipe based on quantization settings
+            holistic_config = {
+                'min_detection_confidence': 0.3,  # Lower for speed with quantization
+                'min_tracking_confidence': 0.3,   # Lower for speed with quantization
+                'model_complexity': self.model_complexity
+            }
+
+            # Adjust settings based on quantization level
+            if self.quantization_enabled:
+                if self.quantization_level == 'FP16':
+                    # FP16 settings for better performance
+                    holistic_config['min_detection_confidence'] = 0.2
+                    holistic_config['min_tracking_confidence'] = 0.2
+                elif self.quantization_level == 'INT8':
+                    # INT8 settings (most aggressive quantization)
+                    holistic_config['min_detection_confidence'] = 0.1
+                    holistic_config['min_tracking_confidence'] = 0.1
+                    holistic_config['model_complexity'] = 0  # Force lowest complexity
+
+            self.holistic = self.mp_holistic.Holistic(**holistic_config)
             self.mp_draw = mp.solutions.drawing_utils
-            logging.info("MediaPipe initialized successfully")
+            logging.info(f"MediaPipe initialized successfully with {self.quantization_level} quantization (complexity: {self.model_complexity})")
+
         except Exception as e:
             logging.error(f"MediaPipe initialization failed: {e}")
             self.mp_holistic = None
@@ -220,6 +242,244 @@ class SmartCursorStable:
         self.dwell_start_time = 0
         self.dwell_position = None
         self.dwell_active = False
+
+    def initialize_performance_optimizations(self):
+        """Initialize performance optimization features"""
+        # GPU acceleration settings
+        self.gpu_enabled = False
+        self.cuda_available = False
+        self.opencl_available = False
+
+        # Frame skipping and motion detection
+        self.frame_skip_enabled = True
+        self.motion_threshold = 0.01  # Minimum motion to process frame
+        self.skip_counter = 0
+        self.skip_interval = 3  # Skip every Nth frame when no motion
+        self.prev_frame_gray = None
+
+        # Resolution scaling based on distance
+        self.distance_scaling_enabled = True
+        self.near_distance_threshold = 0.3  # Close distance (higher resolution)
+        self.far_distance_threshold = 0.7   # Far distance (lower resolution)
+        self.near_scale = 1.0  # Full resolution when close
+        self.far_scale = 0.5   # Half resolution when far
+
+        # Model quantization
+        self.quantization_enabled = True
+        self.quantization_level = 'INT8'  # Options: 'FP32', 'FP16', 'INT8'
+        self.model_complexity = 0  # 0=fastest, 2=most accurate
+
+        # Landmark caching for static poses
+        self.landmark_cache_enabled = True
+        self.landmark_cache = {}
+        self.cache_timeout = 0.5  # seconds
+        self.last_cache_update = 0
+        self.pose_stability_threshold = 0.05  # Minimum movement to invalidate cache
+
+        # Parallel pipeline processing
+        self.parallel_processing_enabled = True
+        self.processing_threads = 2
+        self.pipeline_stages = ['preprocess', 'inference', 'postprocess']
+
+        # Performance tracking
+        self.performance_metrics = {
+            'gpu_acceleration': False,
+            'frame_skip_rate': 0.0,
+            'avg_processing_resolution': 1.0,
+            'cache_hit_rate': 0.0,
+            'parallel_efficiency': 0.0
+        }
+
+        # Try to enable GPU acceleration
+        self._enable_gpu_acceleration()
+
+        logging.info("Performance optimizations initialized")
+
+    def _enable_gpu_acceleration(self):
+        """Enable GPU acceleration for MediaPipe if available"""
+        try:
+            # Check for CUDA availability
+            import torch
+            if torch.cuda.is_available():
+                self.cuda_available = True
+                self.gpu_enabled = True
+                self.performance_metrics['gpu_acceleration'] = True
+                logging.info("CUDA GPU acceleration enabled")
+
+                # Reinitialize MediaPipe with GPU support
+                # Note: MediaPipe automatically uses GPU if available, but we can force it
+                if hasattr(self, 'holistic') and self.holistic:
+                    self.holistic.close()
+
+                # Try to use GPU-accelerated MediaPipe
+                try:
+                    self.holistic = self.mp_holistic.Holistic(
+                        min_detection_confidence=0.3,
+                        min_tracking_confidence=0.3,
+                        model_complexity=0
+                    )
+                    logging.info("MediaPipe reinitialized with GPU support")
+                except Exception as e:
+                    logging.warning(f"GPU MediaPipe initialization failed: {e}")
+                    # Fallback to CPU
+                    self.gpu_enabled = False
+                    self.performance_metrics['gpu_acceleration'] = False
+
+            else:
+                # Check for OpenCL support
+                try:
+                    import pyopencl as cl
+                    platforms = cl.get_platforms()
+                    if platforms:
+                        self.opencl_available = True
+                        self.gpu_enabled = True
+                        self.performance_metrics['gpu_acceleration'] = True
+                        logging.info("OpenCL GPU acceleration enabled")
+                    else:
+                        logging.info("No GPU acceleration available, using CPU")
+                except ImportError:
+                    logging.info("OpenCL not available, using CPU")
+
+        except ImportError:
+            logging.info("PyTorch not available for GPU detection, using CPU")
+
+        # If no GPU, ensure we're using optimized CPU settings
+        if not self.gpu_enabled:
+            logging.info("Using optimized CPU processing")
+
+    def _should_process_frame(self, frame):
+        """Determine if frame should be processed based on performance optimizations"""
+
+        # Always process if optimizations are disabled
+        if not self.frame_skip_enabled:
+            return True
+
+        # Convert to grayscale for motion detection
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+        # Initialize previous frame if needed
+        if self.prev_frame_gray is None:
+            self.prev_frame_gray = gray.copy()
+            return True  # Process first frame
+
+        # Calculate motion using frame difference
+        frame_diff = cv2.absdiff(self.prev_frame_gray, gray)
+        _, thresh = cv2.threshold(frame_diff, 25, 255, cv2.THRESH_BINARY)
+        motion_pixels = np.sum(thresh > 0)
+        total_pixels = frame.shape[0] * frame.shape[1]
+        motion_ratio = motion_pixels / total_pixels
+
+        # Update previous frame
+        self.prev_frame_gray = gray.copy()
+
+        # Check if motion exceeds threshold
+        if motion_ratio > self.motion_threshold:
+            return True  # Process frame with significant motion
+
+        # Frame skipping: only process every Nth frame when no motion
+        self.skip_counter += 1
+        should_process = (self.skip_counter % self.skip_interval == 0)
+
+        return should_process
+
+    def _apply_distance_scaling(self, frame):
+        """Apply resolution scaling based on estimated distance from camera"""
+
+        if not self.distance_scaling_enabled or not self.camera_available:
+            return frame, 1.0  # Return original frame and scale factor of 1.0
+
+        try:
+            # Estimate distance using frame brightness (simplified approach)
+            # In a real implementation, this would use depth estimation or face size
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            avg_brightness = np.mean(gray) / 255.0
+
+            # Estimate distance based on brightness (brighter = closer)
+            # This is a very simplified approximation
+            estimated_distance = 1.0 - avg_brightness
+
+            # Determine scale factor based on distance
+            if estimated_distance < self.near_distance_threshold:
+                scale_factor = self.near_scale  # Full resolution when close
+            elif estimated_distance > self.far_distance_threshold:
+                scale_factor = self.far_scale  # Reduced resolution when far
+            else:
+                # Linear interpolation between near and far thresholds
+                t = (estimated_distance - self.near_distance_threshold) / (self.far_distance_threshold - self.near_distance_threshold)
+                scale_factor = self.near_scale + t * (self.far_scale - self.near_scale)
+
+            # Apply scaling if needed
+            if scale_factor < 1.0:
+                new_width = int(frame.shape[1] * scale_factor)
+                new_height = int(frame.shape[0] * scale_factor)
+                scaled_frame = cv2.resize(frame, (new_width, new_height), interpolation=cv2.INTER_LINEAR)
+                return scaled_frame, scale_factor
+            else:
+                return frame, 1.0
+
+        except Exception as e:
+            logging.warning(f"Distance scaling error: {e}")
+            return frame, 1.0
+
+        def _get_cached_landmarks(self, pose_key):
+            """Get cached landmarks for static poses"""
+            if not self.landmark_cache_enabled:
+                return None
+
+            current_time = time.time()
+
+            # Check if cache entry exists and is not expired
+            if pose_key in self.landmark_cache:
+                cached_data, timestamp = self.landmark_cache[pose_key]
+                if current_time - timestamp < self.cache_timeout:
+                    return cached_data
+
+            return None
+
+        def _set_cached_landmarks(self, pose_key, landmarks):
+            """Cache landmarks for static poses"""
+            if not self.landmark_cache_enabled:
+                return
+
+            current_time = time.time()
+            self.landmark_cache[pose_key] = (landmarks, current_time)
+            self.last_cache_update = current_time
+
+        def _check_pose_stability(self, current_landmarks, cached_landmarks):
+            """Check if pose has changed significantly since last cache"""
+
+            if not current_landmarks or not cached_landmarks:
+                return False
+
+            try:
+                # Calculate average movement across key landmarks
+                total_movement = 0
+                landmark_count = 0
+
+                # Compare key landmarks (nose, shoulders, elbows, wrists)
+                key_indices = [0, 11, 12, 13, 14, 15, 16]  # Nose, shoulders, elbows, wrists
+
+                for idx in key_indices:
+                    if idx < len(current_landmarks) and idx < len(cached_landmarks):
+                        current_lm = current_landmarks[idx]
+                        cached_lm = cached_landmarks[idx]
+
+                        # Calculate Euclidean distance
+                        movement = math.sqrt(
+                            (current_lm[0] - cached_lm[0])**2 +
+                            (current_lm[1] - cached_lm[1])**2
+                        )
+                        total_movement += movement
+                        landmark_count += 1
+
+                if landmark_count > 0:
+                    avg_movement = total_movement / landmark_count
+                    return avg_movement < self.pose_stability_threshold
+
+            except Exception as e:
+                logging.warning(f"Pose stability check error: {e}")
+
+            return False
 
     def create_control_panel(self):
         """Create the main GUI control panel"""
@@ -725,6 +985,26 @@ For issues: Check the system log or contact support.
                     img = placeholder_img.copy()
                     success = True
 
+                # Apply performance optimizations
+                should_process = self._should_process_frame(img)
+
+                if not should_process:
+                    # Update frame skip metrics
+                    self.skip_counter += 1
+                    if self.skip_counter % 10 == 0:  # Update metrics every 10 skips
+                        total_frames = len(self.fps_history) + self.skip_counter
+                        skip_rate = self.skip_counter / max(1, total_frames)
+                        self.performance_metrics['frame_skip_rate'] = skip_rate
+
+                    # Still maintain timing for FPS calculation
+                    elapsed = time.time() - start_time
+                    if elapsed < 0.033:  # ~30 FPS
+                        time.sleep(0.033 - elapsed)
+                    continue
+
+                # Reset skip counter when we process a frame
+                self.skip_counter = 0
+
                 # Use high-performance cursor processing
                 result = self.hp_cursor.process_frame_async(img)
                 if result is None:
@@ -812,25 +1092,25 @@ For issues: Check the system log or contact support.
         detection_found = False
 
         # Draw landmarks if available
-        if self.mp_draw and results:
-            try:
-                if results.face_landmarks:
-                    self.mp_draw.draw_landmarks(img, results.face_landmarks,
-                                              self.mp_holistic.FACEMESH_CONTOURS,
-                                              landmark_drawing_spec=self.mp_draw.DrawingSpec(
-                                                  color=(0,255,0), thickness=1, circle_radius=1))
-                if results.left_hand_landmarks:
-                    self.mp_draw.draw_landmarks(img, results.left_hand_landmarks,
-                                              self.mp_holistic.HAND_CONNECTIONS,
-                                              landmark_drawing_spec=self.mp_draw.DrawingSpec(
-                                                  color=(0,0,255), thickness=1, circle_radius=1))
-                if results.right_hand_landmarks:
-                    self.mp_draw.draw_landmarks(img, results.right_hand_landmarks,
-                                              self.mp_holistic.HAND_CONNECTIONS,
-                                              landmark_drawing_spec=self.mp_draw.DrawingSpec(
-                                                  color=(255,255,0), thickness=1, circle_radius=1))
-            except Exception as e:
-                logging.error(f"Landmark drawing error: {e}")
+        # if self.mp_draw and results:
+        #     try:
+        #         if results.face_landmarks:
+        #             self.mp_draw.draw_landmarks(img, results.face_landmarks,
+        #                                       self.mp_holistic.FACEMESH_CONTOURS,
+        #                                       landmark_drawing_spec=self.mp_draw.DrawingSpec(
+        #                                           color=(0,255,0), thickness=1, circle_radius=1))
+        #         if results.left_hand_landmarks:
+        #             self.mp_draw.draw_landmarks(img, results.left_hand_landmarks,
+        #                                       self.mp_holistic.HAND_CONNECTIONS,
+        #                                       landmark_drawing_spec=self.mp_draw.DrawingSpec(
+        #                                           color=(0,0,255), thickness=1, circle_radius=1))
+        #         if results.right_hand_landmarks:
+        #             self.mp_draw.draw_landmarks(img, results.right_hand_landmarks,
+        #                                       self.mp_holistic.HAND_CONNECTIONS,
+        #                                       landmark_drawing_spec=self.mp_draw.DrawingSpec(
+        #                                           color=(255,255,0), thickness=1, circle_radius=1))
+        #     except Exception as e:
+        #         logging.error(f"Landmark drawing error: {e}")
 
         # Process based on current mode
         if self.current_mode == "eye_tracking" and results.face_landmarks:

@@ -1,5 +1,5 @@
 opencv-python==4.8.1.78
-mediapipe==0.10.3
+mediapipe==0.10.5
 pyautogui==0.9.54
 Pillow==10.0.1
 numpy==1.24.3
@@ -10,3 +10,4 @@ SpeechRecognition==3.10.0
 keyboard==0.13.5
 mouse==0.7.1
 pywin32==306; sys_platform == 'win32'
+pyopencl
