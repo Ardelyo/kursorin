@@ -19,6 +19,8 @@ import cursor_control
 import gesture_recognition
 import tracking_engines
 import performance_optimizer
+import virtual_keyboard
+import text_display
 
 
 class SmartCursorApplication:
@@ -36,6 +38,8 @@ class SmartCursorApplication:
         self.tracking_manager = tracking_engines.TrackingEngineManager(self.screen_width, self.screen_height)
         self.cursor_controller = cursor_control.CursorController(self.screen_width, self.screen_height)
         self.gesture_recognizer = gesture_recognition.GestureRecognizer()
+        self.virtual_keyboard = virtual_keyboard.VirtualKeyboardDisplay(self.screen_width, self.screen_height)
+        self.text_display = text_display.TextDisplay(self.screen_width, self.screen_height)
 
         # Initialize MediaPipe
         self.mp_holistic = mp.solutions.holistic
@@ -50,6 +54,9 @@ class SmartCursorApplication:
         self.running = False
         self.current_mode = "normal"
         self.gui = None
+
+        # Typing mode state
+        self.typing_mode_active = False
 
         # Performance tracking
         self.fps_history = []
@@ -113,6 +120,7 @@ class SmartCursorApplication:
     def set_mode(self, mode: str):
         """Set the application mode"""
         self.current_mode = mode
+        self.typing_mode_active = (mode == "typing")
 
         # Configure tracking based on mode
         if mode == "normal":
@@ -125,8 +133,11 @@ class SmartCursorApplication:
             self.tracking_manager.set_sensitivity(0.95)
             self.cursor_controller.set_smoothing_factor(0.3)  # Less smoothing for faster response
         elif mode == "typing":
-            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.EYE)
-            self.cursor_controller.set_smoothing_factor(0.9)
+            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.FINGER)
+            self.tracking_manager.set_sensitivity(0.8)
+            self.cursor_controller.set_smoothing_factor(0.7)
+            # Initialize typing mode
+            self.text_display.clear_text()
 
         logging.info(f"Mode changed to: {mode}")
 
@@ -160,9 +171,33 @@ class SmartCursorApplication:
                 holistic_results, hand_results
             )
 
+            # Handle typing mode interactions
+            typed_character = ""
+            if self.typing_mode_active and hand_results and hand_results.multi_hand_landmarks:
+                # Get finger positions for keyboard interaction
+                finger_positions = []
+                for hand_landmarks in hand_results.multi_hand_landmarks:
+                    # Use index finger tip
+                    index_tip = hand_landmarks.landmark[8]
+                    finger_x = int(index_tip.x * self.screen_width)
+                    finger_y = int(index_tip.y * self.screen_height)
+                    finger_positions.append((finger_x, finger_y))
+
+                # Update virtual keyboard with finger positions
+                self.virtual_keyboard.update_finger_position(finger_positions)
+
+                # Check for key presses (dwell clicking on keyboard)
+                if detection_found and self.virtual_keyboard.is_position_on_keyboard((cursor_x, cursor_y)):
+                    # Use dwell time for keyboard presses
+                    pressed = self.cursor_controller.handle_dwell_clicking(cursor_x, cursor_y, detection_found)
+                    if pressed:
+                        typed_character = self.virtual_keyboard.press_key_at_position((cursor_x, cursor_y))
+                        if typed_character:
+                            self._handle_keyboard_input(typed_character)
+
             # Handle cursor control
             gesture = None
-            if hand_results and hand_results.multi_hand_landmarks:
+            if not self.typing_mode_active and hand_results and hand_results.multi_hand_landmarks:
                 # Detect gestures
                 hand_landmarks = hand_results.multi_hand_landmarks[0]
                 gesture = self.gesture_recognizer.detect_gesture(hand_landmarks)
@@ -171,10 +206,11 @@ class SmartCursorApplication:
                 if gesture and self.gesture_recognizer.should_trigger_action(gesture):
                     self._handle_gesture_action(gesture)
 
-            # Move cursor or handle dwell clicking
-            clicked = self.cursor_controller.handle_dwell_clicking(
-                cursor_x, cursor_y, detection_found
-            )
+            # Move cursor or handle dwell clicking (non-typing mode)
+            if not self.typing_mode_active:
+                clicked = self.cursor_controller.handle_dwell_clicking(
+                    cursor_x, cursor_y, detection_found
+                )
 
             # Update display
             display_frame = self._update_display(
@@ -187,6 +223,10 @@ class SmartCursorApplication:
             logging.error(f"Frame processing error: {e}")
             return frame, False, None
 
+    def _handle_keyboard_input(self, character: str):
+        """Handle keyboard input in typing mode"""
+        self.text_display.add_text(character)
+
     def _handle_gesture_action(self, gesture: str):
         """Handle gesture-based actions"""
         if gesture == "pinch":
@@ -194,13 +234,18 @@ class SmartCursorApplication:
         elif gesture == "peace":
             self.cursor_controller.perform_double_click()
         elif gesture == "open":
-        # Could implement drag or other actions
+            # Could implement drag or other actions
             pass
 
     def _update_display(self, frame: np.ndarray, cursor_pos: Tuple[int, int],
-                       detection_found: bool, gesture: Optional[str]) -> np.ndarray:
+                        detection_found: bool, gesture: Optional[str]) -> np.ndarray:
         """Update the display frame with overlays"""
         display_frame = frame.copy()
+
+        # Draw virtual keyboard and text display in typing mode
+        if self.typing_mode_active:
+            display_frame = self.virtual_keyboard.draw_keyboard(display_frame)
+            display_frame = self.text_display.draw_text_display(display_frame)
 
         # Draw landmarks
         if hasattr(self, 'holistic') and self.holistic:
