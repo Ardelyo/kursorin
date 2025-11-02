@@ -1,101 +1,142 @@
-# 🎯 Smart Cursor Control - Current Stable Version
+# 🖱️ Smart Cursor Control - Modular Version
 
-## 📂 Folder Organization
+A refactored, modular computer vision system for hands-free cursor control using your webcam.
 
-### **Core/** - Main Application Files
-- `smart_cursor_stable.py` → **Main stable application** (recommended)
-- `smart_cursor_accessibility.py` → Advanced accessibility version
-- `demo_mode.py` → Simple camera test mode
+## ✨ What's New in This Version
 
-### **Launchers/** - Ways to Start the System
-- `launcher_stable.py` → **Stable launcher with diagnostics** (recommended)
-- `launch_smart_cursor.py` → Original launcher
-- `launch.bat` → Windows batch launcher
+- **🔧 Modular Architecture**: Large files broken down into focused, maintainable modules
+- **📦 Easy to Edit**: Each component has a single responsibility
+- **🚀 Simplified Launch**: Single launcher with dependency checking
+- **🧹 Clean Structure**: Removed duplicates and unnecessary files
 
-### **Docs/** - Documentation & Help
-- `QUICK_START.md` → **Beginner guide** (read first!)
-- `TROUBLESHOOTING.md` → Problem-solving guide
-- `FIXES_APPLIED.md` → What was fixed and why
+## 📁 Project Structure
 
-### **Config/** - Configuration Files
-- `requirements_stable.txt` → **Stable dependencies** (recommended)
-- `requirements.txt` → Full dependencies
-
-### **Tools/** - Utilities (currently empty)
-
-## 🚀 How to Start
-
-### **Easiest Way:**
-1. **Double-click `START_HERE.bat`**
-2. Follow the on-screen instructions
-3. Choose "Run Demo Mode" first to test
-4. Then try "Launch Smart Cursor"
-
-### **Manual Start:**
-```bash
-# Navigate to Launchers folder
-cd Launchers
-
-# Run stable launcher
-python launcher_stable.py
+```
+Current_Version/
+├── Core/
+│   ├── modules/           # Modular components
+│   │   ├── settings_manager.py      # Settings loading/saving
+│   │   ├── gui_components.py        # User interface
+│   │   ├── cursor_control.py        # Cursor movement & clicking
+│   │   ├── gesture_recognition.py   # Hand gesture detection
+│   │   ├── tracking_engines.py      # Various tracking methods
+│   │   ├── performance_optimizer.py # GPU acceleration & optimization
+│   │   └── main_application.py      # Application coordinator
+│   └── __pycache__/        # Python cache files
+├── Config/                 # Configuration files
+├── Docs/                   # Documentation
+├── launch.py              # Main launcher with dependency checks
+├── START.bat             # Windows launcher
+├── requirements.txt       # Dependencies
+└── README.md             # This file
 ```
 
-## 🔧 System Status
+## 🚀 Quick Start
 
-### **Current Fixes Applied:**
-- ✅ **Camera failure handling** - System runs even without camera
-- ✅ **GUI crash fixes** - Proper window management
-- ✅ **Error recovery** - Graceful handling of all failures
-- ✅ **Fallback modes** - Limited functionality when components fail
+### For Windows Users:
+1. Double-click `START.bat`
+2. Follow the on-screen instructions
 
-### **Safety Features:**
-- 🛡️ **Mouse control toggle** - Enable/disable anytime
-- 🛡️ **Timeout protection** - Auto-shutdown after 30s inactivity
-- 🛡️ **Resource cleanup** - Proper shutdown handling
-- 🛡️ **Demo mode** - Test without risking full system
+### For All Platforms:
+1. Install dependencies: `pip install -r requirements.txt`
+2. Run: `python launch.py`
 
-## 📊 Troubleshooting
+## 🎮 How to Use
 
-### **If System Still Fails:**
-1. **Check Docs/TROUBLESHOOTING.md** for detailed solutions
-2. **Run demo mode first** to isolate camera issues
-3. **Check launcher logs** in the launcher window
-4. **Try without camera** - system works in limited mode
+1. **Launch the application** using the launcher
+2. **Choose a tracking mode** from the GUI:
+   - 👆 **Finger Tracking**: Precise index finger control (recommended)
+   - 👁️ **Eye Tracking**: Eye gaze control
+   - 🎯 **Gaming**: Optimized for fast movement
+   - ⌨️ **Typing**: Head tracking for accessibility
 
-### **Quick Fixes:**
-- **"Exit code 1"** → Camera/GUI initialization fixed
-- **"Mouse not working"** → Check toggle in GUI
-- **"System slow"** → Close other programs
-- **"Camera not found"** → System runs in demo mode
+3. **Adjust settings** with the sliders:
+   - **Dwell Time**: How long to hold cursor to click
+   - **Sensitivity**: Tracking responsiveness
+   - **Smoothing**: Cursor movement smoothness
 
-## 🎮 Features
+4. **Use gestures** for clicking:
+   - 🤏 **Pinch**: Left click
+   - ✊ **Fist**: Right click
+   - ✌️ **Peace**: Double click
 
-### **Control Modes:**
-- **👁️ Eye Tracking** - Control with eye gaze
-- **🖐️ Hand Tracking** - Use hand gestures
-- **🎯 Gaming Mode** - Enhanced precision
-- **⌨️ Typing Mode** - Steady cursor
+5. **Press 'Q'** in the camera window to quit
 
-### **Accessibility:**
-- **Voice Feedback** - Audio announcements
-- **Dwell Clicking** - Hold still to click
-- **High Contrast** - Better visibility
-- **Large Controls** - Easier interaction
+## 🛠️ Development
 
-## 📞 Support
+### Adding New Features
 
-**Need Help?**
-- 📖 **Read `Docs/QUICK_START.md`** first
-- 🔧 **Check `Docs/TROUBLESHOOTING.md`** for issues
-- 📊 **Review `Docs/FIXES_APPLIED.md`** for technical details
-- 🎯 **Start with `START_HERE.bat`** for guided setup
+Each module has a specific responsibility:
+
+- **Settings**: Modify `settings_manager.py`
+- **GUI**: Update `gui_components.py`
+- **Cursor Logic**: Edit `cursor_control.py`
+- **Gestures**: Enhance `gesture_recognition.py`
+- **Tracking**: Add to `tracking_engines.py`
+- **Performance**: Optimize in `performance_optimizer.py`
+
+### Testing Changes
+
+1. Run: `python launch.py`
+2. Test your changes
+3. Check logs in `smart_cursor.log`
+
+## 🔧 Configuration
+
+Settings are automatically saved to `cursor_settings.json`:
+
+```json
+{
+  "dwell_time": 2.0,
+  "tracking_sensitivity": 0.8,
+  "smoothing": 0.7,
+  "gesture_recognition": true,
+  "voice_feedback": false
+}
+```
+
+## 🐛 Troubleshooting
+
+### Application won't start:
+- Check `smart_cursor.log` for error messages
+- Ensure your webcam is working
+- Try reinstalling dependencies: `pip install -r requirements.txt`
+
+### Cursor not moving:
+- Check camera permissions
+- Ensure good lighting
+- Try different tracking modes
+- Adjust sensitivity settings
+
+### Performance issues:
+- Close other applications
+- Enable GPU acceleration in settings
+- Lower camera resolution
+
+## 📊 System Requirements
+
+- **Python**: 3.7+
+- **Camera**: Webcam with 640x480 resolution
+- **RAM**: 4GB minimum
+- **OS**: Windows, macOS, or Linux
+
+### Optional (for better performance):
+- CUDA-compatible GPU
+- OpenCL drivers
+
+## 🎯 Key Features
+
+- **Multiple Tracking Methods**: Finger, hand, eye, head, and pose tracking
+- **Gesture Recognition**: Click with hand gestures
+- **Dwell Clicking**: Hold cursor still to click
+- **Performance Optimization**: GPU acceleration support
+- **Modular Design**: Easy to extend and maintain
+- **Cross-Platform**: Works on Windows, macOS, and Linux
+
+## 📝 License
+
+This project is open source. Feel free to modify and distribute.
 
 ---
 
-**🎯 Quick Access:**
-- **Start Here** → `START_HERE.bat`
-- **Main App** → `Core/smart_cursor_stable.py`
-- **Help** → `Docs/QUICK_START.md`
-- **Fixes** → `Docs/TROUBLESHOOTING.md`
-
-**The system is now stable and user-friendly! 🚀✨**
+**🎮 Ready to control your cursor with gestures? Launch and start exploring!**
