@@ -306,6 +306,15 @@ class HighPerformanceCursor:
         try:
             # Process with MediaPipe
             results = self.holistic.process(frame_rgb)
+
+            # Optional: Log detection for debugging (uncomment if needed)
+            # has_right_hand = results.right_hand_landmarks is not None
+            # has_left_hand = results.left_hand_landmarks is not None
+            # if has_right_hand or has_left_hand:
+            #     logging.debug(f"MediaPipe detected hands")
+            # else:
+            #     logging.debug("No hand landmarks detected")
+
         except Exception as e:
             logging.error(f"MediaPipe processing error: {e}")
             return self.cursor_position, False, None
@@ -384,8 +393,12 @@ class HighPerformanceCursor:
 
                     if hasattr(index_tip, 'x') and hasattr(index_tip, 'y'):
                         # Use index finger tip as cursor position - always track when visible
-                        x = max(0, min(self.screen_width, int(index_tip.x * self.screen_width)))
-                        y = max(0, min(self.screen_height, int(index_tip.y * self.screen_height)))
+                        raw_x = index_tip.x
+                        raw_y = index_tip.y
+                        x = max(0, min(self.screen_width, int(raw_x * self.screen_width)))
+                        y = max(0, min(self.screen_height, int(raw_y * self.screen_height)))
+
+
 
                         # Higher sensitivity for finger tracking since it's more precise
                         finger_sensitivity = min(1.0, self.tracking_sensitivity * 1.2)
