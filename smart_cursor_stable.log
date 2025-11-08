@@ -1,0 +1,1744 @@
+2025-11-01 20:12:54,124 - INFO - MediaPipe initialized successfully
+2025-11-01 20:12:54,124 - INFO - Screen size: 1920x1080
+2025-11-01 20:12:57,174 - INFO - Webcam initialized successfully
+2025-11-01 20:12:59,601 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:01,606 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:03,617 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:05,646 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:07,653 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:09,667 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:11,677 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:13,686 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:15,696 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:17,741 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:19,748 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:21,754 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:23,764 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:25,769 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:27,778 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:29,790 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:31,799 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:33,809 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:35,828 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:37,838 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:39,844 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:41,851 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:43,860 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:45,871 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:47,877 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:13:49,906 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:19:35,500 - INFO - MediaPipe initialized successfully
+2025-11-01 20:19:35,505 - INFO - Screen size: 1920x1080
+2025-11-01 20:19:36,925 - INFO - Webcam initialized successfully
+2025-11-01 20:19:39,921 - ERROR - Main loop error: only length-1 arrays can be converted to Python scalars
+2025-11-01 20:19:40,294 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:19:40,927 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-01 20:19:40,930 - INFO - Settings saved successfully
+2025-11-01 20:19:41,562 - ERROR - Application error: main thread is not in main loop
+2025-11-01 20:19:42,409 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:28:34,780 - INFO - Settings loaded successfully
+2025-11-01 20:28:34,928 - INFO - MediaPipe initialized successfully
+2025-11-01 20:28:34,928 - INFO - Screen size: 1920x1080
+2025-11-01 20:28:36,638 - INFO - Webcam initialized successfully
+2025-11-01 20:28:38,258 - ERROR - Main loop error: only length-1 arrays can be converted to Python scalars
+2025-11-01 20:28:38,259 - ERROR - System encountered a critical error and will shut down
+2025-11-01 20:28:38,260 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-01 20:28:38,262 - INFO - Settings saved successfully
+2025-11-01 20:28:38,790 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:31:09,655 - INFO - Settings loaded successfully
+2025-11-01 20:31:09,816 - INFO - MediaPipe initialized successfully
+2025-11-01 20:31:09,821 - INFO - Screen size: 1920x1080
+2025-11-01 20:31:11,091 - INFO - Webcam initialized successfully
+2025-11-01 20:31:12,753 - INFO - Gesture click: pinch
+2025-11-01 20:31:12,754 - INFO - Gesture click performed: pinch
+2025-11-01 20:31:12,765 - ERROR - Main loop error: only length-1 arrays can be converted to Python scalars
+2025-11-01 20:31:12,773 - ERROR - System encountered a critical error and will shut down
+2025-11-01 20:31:12,774 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-01 20:31:12,778 - INFO - Settings saved successfully
+2025-11-01 20:31:13,235 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:22,067 - INFO - Settings loaded successfully
+2025-11-01 20:34:22,191 - INFO - MediaPipe initialized successfully
+2025-11-01 20:34:22,191 - INFO - Screen size: 1920x1080
+2025-11-01 20:34:23,252 - INFO - Webcam initialized successfully
+2025-11-01 20:34:24,515 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 20:34:24,647 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 20:34:24,682 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 20:34:25,281 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:27,267 - INFO - Dwell click performed
+2025-11-01 20:34:27,293 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:29,000 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:34:29,000 - INFO - Gesture click performed: fist
+2025-11-01 20:34:29,330 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:31,354 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:33,418 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:34,996 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:34:34,997 - INFO - Gesture click performed: fist
+2025-11-01 20:34:35,507 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:35,542 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:34:35,545 - INFO - Gesture click performed: fist
+2025-11-01 20:34:35,787 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:34:35,787 - INFO - Gesture click performed: fist
+2025-11-01 20:34:36,341 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:34:36,343 - INFO - Gesture click performed: fist
+2025-11-01 20:34:36,605 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:34:36,643 - INFO - Gesture click performed: fist
+2025-11-01 20:34:37,119 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:34:37,121 - INFO - Gesture click performed: fist
+2025-11-01 20:34:37,241 - INFO - Gesture click: pinch
+2025-11-01 20:34:37,246 - INFO - Gesture click performed: pinch
+2025-11-01 20:34:37,674 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:37,674 - INFO - Gesture click: pinch
+2025-11-01 20:34:37,697 - INFO - Gesture click performed: pinch
+2025-11-01 20:34:39,799 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:41,909 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:44,028 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:46,141 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:47,901 - INFO - Gesture click: pinch
+2025-11-01 20:34:47,901 - INFO - Gesture click performed: pinch
+2025-11-01 20:34:48,299 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:50,386 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:50,934 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:34:50,934 - INFO - Gesture click performed: fist
+2025-11-01 20:34:52,521 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:54,651 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:56,734 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:34:58,812 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:00,907 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:03,016 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:03,016 - INFO - Gesture click: pinch
+2025-11-01 20:35:03,016 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:03,614 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:03,616 - INFO - Gesture click performed: fist
+2025-11-01 20:35:03,849 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:03,854 - INFO - Gesture click performed: fist
+2025-11-01 20:35:04,305 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:04,305 - INFO - Gesture click performed: fist
+2025-11-01 20:35:04,541 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:04,545 - INFO - Gesture click performed: fist
+2025-11-01 20:35:04,981 - INFO - Gesture click: pinch
+2025-11-01 20:35:04,988 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:05,131 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:05,511 - INFO - Gesture click: pinch
+2025-11-01 20:35:05,511 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:06,078 - INFO - Gesture click: pinch
+2025-11-01 20:35:06,081 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:06,429 - INFO - Gesture click: pinch
+2025-11-01 20:35:06,430 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:06,954 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:06,954 - INFO - Gesture click performed: fist
+2025-11-01 20:35:07,181 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:07,182 - INFO - Gesture click performed: fist
+2025-11-01 20:35:07,229 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:07,601 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:07,601 - INFO - Gesture click performed: fist
+2025-11-01 20:35:07,736 - INFO - Gesture click: pinch
+2025-11-01 20:35:07,736 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:08,171 - INFO - Gesture click: pinch
+2025-11-01 20:35:08,173 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:08,673 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:08,673 - INFO - Gesture click performed: fist
+2025-11-01 20:35:09,089 - INFO - Gesture click: pinch
+2025-11-01 20:35:09,091 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:09,321 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:09,621 - INFO - Gesture click: pinch
+2025-11-01 20:35:09,621 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:10,274 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:10,274 - INFO - Gesture click performed: fist
+2025-11-01 20:35:10,502 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:10,503 - INFO - Gesture click performed: fist
+2025-11-01 20:35:10,940 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:10,941 - INFO - Gesture click performed: fist
+2025-11-01 20:35:11,194 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:11,271 - INFO - Gesture click performed: fist
+2025-11-01 20:35:11,446 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:11,702 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:11,704 - INFO - Gesture click performed: fist
+2025-11-01 20:35:11,940 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:11,941 - INFO - Gesture click performed: fist
+2025-11-01 20:35:12,383 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:12,383 - INFO - Gesture click performed: fist
+2025-11-01 20:35:12,606 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:12,607 - INFO - Gesture click performed: fist
+2025-11-01 20:35:13,047 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:13,047 - INFO - Gesture click performed: fist
+2025-11-01 20:35:13,286 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:13,286 - INFO - Gesture click performed: fist
+2025-11-01 20:35:13,511 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:13,711 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:13,711 - INFO - Gesture click performed: fist
+2025-11-01 20:35:13,947 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:13,947 - INFO - Gesture click performed: fist
+2025-11-01 20:35:14,281 - INFO - Gesture click: pinch
+2025-11-01 20:35:14,281 - INFO - Gesture click performed: pinch
+2025-11-01 20:35:15,593 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:17,691 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 20:35:18,250 - INFO - Gesture click: right-click (fist)
+2025-11-01 20:35:18,252 - INFO - Gesture click performed: fist
+2025-11-01 23:13:26,418 - INFO - No settings file found, using defaults
+2025-11-01 23:13:26,475 - INFO - MediaPipe initialized successfully
+2025-11-01 23:13:26,475 - INFO - Screen size: 1920x1080
+2025-11-01 23:13:27,345 - INFO - Webcam initialized successfully
+2025-11-01 23:13:28,486 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:13:28,553 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:13:28,585 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:13:28,632 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:13:29,144 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:13:29,347 - INFO - Gesture click: pinch
+2025-11-01 23:13:29,347 - INFO - Gesture click performed: pinch
+2025-11-01 23:13:29,693 - INFO - Gesture click: pinch
+2025-11-01 23:13:29,694 - INFO - Gesture click performed: pinch
+2025-11-01 23:13:31,149 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:14:19,965 - INFO - No settings file found, using defaults
+2025-11-01 23:14:20,039 - INFO - MediaPipe initialized successfully
+2025-11-01 23:14:20,039 - INFO - Screen size: 1920x1080
+2025-11-01 23:14:20,801 - INFO - Webcam initialized successfully
+2025-11-01 23:14:21,972 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:14:22,036 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:14:22,083 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:14:22,253 - INFO - Gesture click: pinch
+2025-11-01 23:14:22,253 - INFO - Gesture click performed: pinch
+2025-11-01 23:14:22,527 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:14:23,601 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:14:23,601 - INFO - Gesture click performed: fist
+2025-11-01 23:14:23,875 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:14:24,530 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:24:17,505 - INFO - No settings file found, using defaults
+2025-11-01 23:24:17,554 - INFO - MediaPipe initialized successfully
+2025-11-01 23:24:17,554 - INFO - Screen size: 1920x1080
+2025-11-01 23:24:18,387 - INFO - Webcam initialized successfully
+2025-11-01 23:24:19,518 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:24:19,569 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:24:19,637 - ERROR - Overlay drawing error: 'latency_ms'
+2025-11-01 23:24:20,176 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:24:22,182 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:24:22,554 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:24:22,555 - INFO - Gesture click performed: fist
+2025-11-01 23:24:22,955 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:24:24,187 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:23,068 - INFO - No settings file found, using defaults
+2025-11-01 23:32:23,134 - INFO - MediaPipe initialized successfully
+2025-11-01 23:32:23,159 - INFO - Screen size: 1920x1080
+2025-11-01 23:32:24,084 - INFO - Webcam initialized successfully
+2025-11-01 23:32:25,913 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:27,919 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:29,925 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:31,929 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:33,938 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:35,944 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:37,949 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:38,385 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:38,385 - INFO - Gesture click performed: fist
+2025-11-01 23:32:38,665 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:38,666 - INFO - Gesture click performed: fist
+2025-11-01 23:32:39,054 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:39,055 - INFO - Gesture click performed: fist
+2025-11-01 23:32:39,260 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:39,260 - INFO - Gesture click performed: fist
+2025-11-01 23:32:39,580 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:39,580 - INFO - Gesture click performed: fist
+2025-11-01 23:32:39,859 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:39,860 - INFO - Gesture click performed: fist
+2025-11-01 23:32:39,960 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:40,133 - INFO - Gesture click: pinch
+2025-11-01 23:32:40,134 - INFO - Gesture click performed: pinch
+2025-11-01 23:32:41,963 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:41,964 - INFO - Gesture click performed: fist
+2025-11-01 23:32:41,966 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:42,368 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:42,368 - INFO - Gesture click performed: fist
+2025-11-01 23:32:42,573 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:42,573 - INFO - Gesture click performed: fist
+2025-11-01 23:32:42,889 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:42,890 - INFO - Gesture click performed: fist
+2025-11-01 23:32:43,304 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:43,304 - INFO - Gesture click performed: fist
+2025-11-01 23:32:43,520 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:43,520 - INFO - Gesture click performed: fist
+2025-11-01 23:32:43,853 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:43,853 - INFO - Gesture click performed: fist
+2025-11-01 23:32:44,020 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:44,208 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:44,208 - INFO - Gesture click performed: fist
+2025-11-01 23:32:44,424 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:32:44,424 - INFO - Gesture click performed: fist
+2025-11-01 23:32:46,121 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:48,167 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:50,242 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:52,326 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:32:54,395 - WARNING - Mouse control timeout - safety shutdown
+2025-11-01 23:32:54,396 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-01 23:32:54,397 - INFO - Settings saved successfully
+2025-11-01 23:32:54,437 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:01,917 - INFO - Settings loaded successfully
+2025-11-01 23:37:02,031 - INFO - MediaPipe initialized successfully
+2025-11-01 23:37:02,031 - INFO - Screen size: 1920x1080
+2025-11-01 23:37:03,355 - INFO - Webcam initialized successfully
+2025-11-01 23:37:06,673 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:08,693 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:10,697 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:12,672 - INFO - Gesture click: finger
+2025-11-01 23:37:12,672 - INFO - Gesture click performed: finger
+2025-11-01 23:37:12,736 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:13,206 - INFO - Gesture click: finger
+2025-11-01 23:37:13,206 - INFO - Gesture click performed: finger
+2025-11-01 23:37:14,758 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:15,311 - INFO - Gesture click: finger
+2025-11-01 23:37:15,311 - INFO - Gesture click performed: finger
+2025-11-01 23:37:16,762 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:18,504 - INFO - Gesture click: finger
+2025-11-01 23:37:18,505 - INFO - Gesture click performed: finger
+2025-11-01 23:37:18,848 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:18,931 - INFO - Gesture click: finger
+2025-11-01 23:37:18,933 - INFO - Gesture click performed: finger
+2025-11-01 23:37:19,299 - INFO - Gesture click: finger
+2025-11-01 23:37:19,299 - INFO - Gesture click performed: finger
+2025-11-01 23:37:19,574 - INFO - Gesture click: finger
+2025-11-01 23:37:19,574 - INFO - Gesture click performed: finger
+2025-11-01 23:37:19,844 - INFO - Gesture click: finger
+2025-11-01 23:37:19,846 - INFO - Gesture click performed: finger
+2025-11-01 23:37:20,963 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:23,060 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:25,073 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:26,629 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-01 23:37:26,631 - INFO - Settings saved successfully
+2025-11-01 23:37:27,120 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:37:28,207 - INFO - System interrupted by user
+2025-11-01 23:40:05,343 - INFO - Settings loaded successfully
+2025-11-01 23:40:05,427 - INFO - MediaPipe initialized successfully
+2025-11-01 23:40:05,427 - INFO - Screen size: 1920x1080
+2025-11-01 23:40:06,507 - INFO - Webcam initialized successfully
+2025-11-01 23:40:08,288 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:40:10,294 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:40:11,609 - INFO - Gesture click: finger
+2025-11-01 23:40:11,609 - INFO - Gesture click performed: finger
+2025-11-01 23:40:11,924 - INFO - Gesture click: finger
+2025-11-01 23:40:11,924 - INFO - Gesture click performed: finger
+2025-11-01 23:40:12,136 - INFO - Gesture click: finger
+2025-11-01 23:40:12,138 - INFO - Gesture click performed: finger
+2025-11-01 23:40:12,314 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:40:12,399 - INFO - Gesture click: finger
+2025-11-01 23:40:12,400 - INFO - Gesture click performed: finger
+2025-11-01 23:40:12,655 - INFO - Gesture click: finger
+2025-11-01 23:40:12,656 - INFO - Gesture click performed: finger
+2025-11-01 23:40:12,927 - INFO - Gesture click: finger
+2025-11-01 23:40:12,928 - INFO - Gesture click performed: finger
+2025-11-01 23:40:13,184 - INFO - Gesture click: finger
+2025-11-01 23:40:13,186 - INFO - Gesture click performed: finger
+2025-11-01 23:40:13,455 - INFO - Gesture click: finger
+2025-11-01 23:40:13,456 - INFO - Gesture click performed: finger
+2025-11-01 23:40:13,827 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:40:13,827 - INFO - Gesture click performed: fist
+2025-11-01 23:40:14,227 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:40:14,228 - INFO - Gesture click performed: fist
+2025-11-01 23:40:14,321 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:40:14,341 - INFO - Gesture click: finger
+2025-11-01 23:40:14,341 - INFO - Gesture click performed: finger
+2025-11-01 23:40:15,312 - INFO - Gesture click: pinch
+2025-11-01 23:40:15,313 - INFO - Gesture click performed: pinch
+2025-11-01 23:40:15,686 - INFO - Gesture click: right-click (fist)
+2025-11-01 23:40:15,687 - INFO - Gesture click performed: fist
+2025-11-01 23:40:16,117 - INFO - Gesture click: finger
+2025-11-01 23:40:16,117 - INFO - Gesture click performed: finger
+2025-11-01 23:40:16,327 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:40:16,392 - INFO - Gesture click: finger
+2025-11-01 23:40:16,392 - INFO - Gesture click performed: finger
+2025-11-01 23:40:18,424 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:40:18,544 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-01 23:40:18,546 - INFO - Settings saved successfully
+2025-11-01 23:40:20,230 - INFO - System interrupted by user
+2025-11-01 23:48:53,657 - INFO - Settings loaded successfully
+2025-11-01 23:48:53,714 - INFO - MediaPipe initialized successfully
+2025-11-01 23:48:53,714 - INFO - Screen size: 1920x1080
+2025-11-01 23:48:54,913 - INFO - Webcam initialized successfully
+2025-11-01 23:48:56,861 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:48:57,959 - INFO - Gesture click: finger
+2025-11-01 23:48:57,959 - INFO - Gesture click performed: finger
+2025-11-01 23:48:58,291 - INFO - Gesture click: finger
+2025-11-01 23:48:58,291 - INFO - Gesture click performed: finger
+2025-11-01 23:48:58,496 - INFO - Gesture click: finger
+2025-11-01 23:48:58,496 - INFO - Gesture click performed: finger
+2025-11-01 23:48:58,807 - INFO - Gesture click: finger
+2025-11-01 23:48:58,807 - INFO - Gesture click performed: finger
+2025-11-01 23:48:58,865 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:48:59,012 - INFO - Gesture click: finger
+2025-11-01 23:48:59,012 - INFO - Gesture click performed: finger
+2025-11-01 23:48:59,332 - INFO - Gesture click: finger
+2025-11-01 23:48:59,332 - INFO - Gesture click performed: finger
+2025-11-01 23:48:59,538 - INFO - Gesture click: finger
+2025-11-01 23:48:59,538 - INFO - Gesture click performed: finger
+2025-11-01 23:48:59,814 - INFO - Gesture click: finger
+2025-11-01 23:48:59,815 - INFO - Gesture click performed: finger
+2025-11-01 23:49:00,133 - INFO - Gesture click: finger
+2025-11-01 23:49:00,134 - INFO - Gesture click performed: finger
+2025-11-01 23:49:00,349 - INFO - Gesture click: finger
+2025-11-01 23:49:00,350 - INFO - Gesture click performed: finger
+2025-11-01 23:49:00,679 - INFO - Gesture click: finger
+2025-11-01 23:49:00,680 - INFO - Gesture click performed: finger
+2025-11-01 23:49:00,873 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:00,894 - INFO - Gesture click: finger
+2025-11-01 23:49:00,894 - INFO - Gesture click performed: finger
+2025-11-01 23:49:01,205 - INFO - Gesture click: finger
+2025-11-01 23:49:01,205 - INFO - Gesture click performed: finger
+2025-11-01 23:49:01,412 - INFO - Gesture click: finger
+2025-11-01 23:49:01,413 - INFO - Gesture click performed: finger
+2025-11-01 23:49:01,735 - INFO - Gesture click: finger
+2025-11-01 23:49:01,736 - INFO - Gesture click performed: finger
+2025-11-01 23:49:01,949 - INFO - Gesture click: finger
+2025-11-01 23:49:01,950 - INFO - Gesture click performed: finger
+2025-11-01 23:49:02,261 - INFO - Gesture click: finger
+2025-11-01 23:49:02,262 - INFO - Gesture click performed: finger
+2025-11-01 23:49:02,474 - INFO - Gesture click: finger
+2025-11-01 23:49:02,474 - INFO - Gesture click performed: finger
+2025-11-01 23:49:02,807 - INFO - Gesture click: finger
+2025-11-01 23:49:02,808 - INFO - Gesture click performed: finger
+2025-11-01 23:49:02,877 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:03,023 - INFO - Gesture click: finger
+2025-11-01 23:49:03,024 - INFO - Gesture click performed: finger
+2025-11-01 23:49:03,337 - INFO - Gesture click: finger
+2025-11-01 23:49:03,337 - INFO - Gesture click performed: finger
+2025-11-01 23:49:03,544 - INFO - Gesture click: finger
+2025-11-01 23:49:03,544 - INFO - Gesture click performed: finger
+2025-11-01 23:49:03,862 - INFO - Gesture click: finger
+2025-11-01 23:49:03,862 - INFO - Gesture click performed: finger
+2025-11-01 23:49:04,069 - INFO - Gesture click: finger
+2025-11-01 23:49:04,070 - INFO - Gesture click performed: finger
+2025-11-01 23:49:04,389 - INFO - Gesture click: finger
+2025-11-01 23:49:04,390 - INFO - Gesture click performed: finger
+2025-11-01 23:49:04,600 - INFO - Gesture click: finger
+2025-11-01 23:49:04,600 - INFO - Gesture click performed: finger
+2025-11-01 23:49:04,916 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:04,948 - INFO - Gesture click: finger
+2025-11-01 23:49:04,949 - INFO - Gesture click performed: finger
+2025-11-01 23:49:05,165 - INFO - Gesture click: finger
+2025-11-01 23:49:05,165 - INFO - Gesture click performed: finger
+2025-11-01 23:49:05,464 - INFO - Gesture click: finger
+2025-11-01 23:49:05,464 - INFO - Gesture click performed: finger
+2025-11-01 23:49:05,679 - INFO - Gesture click: finger
+2025-11-01 23:49:05,679 - INFO - Gesture click performed: finger
+2025-11-01 23:49:06,983 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:09,041 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:10,312 - INFO - Gesture click: pinch
+2025-11-01 23:49:10,312 - INFO - Gesture click performed: pinch
+2025-11-01 23:49:11,128 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:11,308 - INFO - Gesture click: pinch
+2025-11-01 23:49:11,308 - INFO - Gesture click performed: pinch
+2025-11-01 23:49:12,040 - INFO - Gesture click: pinch
+2025-11-01 23:49:12,087 - INFO - Gesture click performed: pinch
+2025-11-01 23:49:12,358 - INFO - Gesture click: pinch
+2025-11-01 23:49:12,358 - INFO - Gesture click performed: pinch
+2025-11-01 23:49:12,808 - INFO - Gesture click: pinch
+2025-11-01 23:49:12,808 - INFO - Gesture click performed: pinch
+2025-11-01 23:49:13,234 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:14,375 - INFO - Gesture click: pinch
+2025-11-01 23:49:14,375 - INFO - Gesture click performed: pinch
+2025-11-01 23:49:15,304 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:17,395 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:17,753 - INFO - Gesture click: pinch
+2025-11-01 23:49:17,753 - INFO - Gesture click performed: pinch
+2025-11-01 23:49:19,490 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:21,568 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:23,664 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:25,850 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:27,948 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:30,029 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:32,036 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:34,042 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:36,049 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:38,141 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:40,241 - ERROR - Status update error: main thread is not in main loop
+2025-11-01 23:49:40,286 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-01 23:49:40,302 - INFO - Settings saved successfully
+2025-11-01 23:49:41,866 - INFO - System interrupted by user
+2025-11-02 00:00:37,756 - INFO - Settings loaded successfully
+2025-11-02 00:00:37,822 - INFO - MediaPipe initialized successfully
+2025-11-02 00:00:37,822 - INFO - Screen size: 1920x1080
+2025-11-02 00:00:38,679 - INFO - Webcam initialized successfully
+2025-11-02 00:00:38,738 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 00:00:40,285 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 00:00:41,751 - INFO - Gesture click: finger
+2025-11-02 00:00:41,751 - INFO - Gesture click performed: finger
+2025-11-02 00:00:42,161 - INFO - Gesture click: finger
+2025-11-02 00:00:42,161 - INFO - Gesture click performed: finger
+2025-11-02 00:00:42,313 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 00:00:42,373 - INFO - Gesture click: finger
+2025-11-02 00:00:44,421 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 00:01:07,867 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 00:01:07,867 - INFO - Settings saved successfully
+2025-11-02 00:01:09,437 - ERROR - Application error: [Errno 22] Invalid argument
+2025-11-02 00:01:09,437 - ERROR - Failed to start Smart Cursor system
+2025-11-02 10:00:04,896 - INFO - Settings loaded successfully
+2025-11-02 10:00:05,050 - INFO - MediaPipe initialized successfully
+2025-11-02 10:00:05,050 - INFO - Screen size: 1920x1080
+2025-11-02 10:00:06,393 - INFO - Webcam initialized successfully
+2025-11-02 10:00:06,582 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 10:00:09,118 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:00:09,529 - INFO - Gesture click: finger
+2025-11-02 10:00:09,529 - INFO - Gesture click performed: finger
+2025-11-02 10:00:09,783 - INFO - Gesture click: finger
+2025-11-02 10:00:09,783 - INFO - Gesture click performed: finger
+2025-11-02 10:00:10,167 - INFO - Gesture click: finger
+2025-11-02 10:00:10,168 - INFO - Gesture click performed: finger
+2025-11-02 10:00:10,377 - INFO - Gesture click: finger
+2025-11-02 10:00:11,124 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:00:34,642 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 10:00:34,642 - INFO - Settings saved successfully
+2025-11-02 10:00:36,346 - ERROR - Application error: [Errno 22] Invalid argument
+2025-11-02 10:00:36,347 - ERROR - Failed to start Smart Cursor system
+2025-11-02 10:41:14,226 - INFO - Settings loaded successfully
+2025-11-02 10:41:14,366 - INFO - MediaPipe initialized successfully
+2025-11-02 10:41:14,366 - INFO - Screen size: 1920x1080
+2025-11-02 10:41:15,503 - INFO - Webcam initialized successfully
+2025-11-02 10:41:15,601 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 10:41:17,712 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:41:19,485 - INFO - Gesture click: finger
+2025-11-02 10:41:19,485 - INFO - Gesture click performed: finger
+2025-11-02 10:41:19,745 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:41:19,890 - INFO - Gesture click: finger
+2025-11-02 10:41:19,890 - INFO - Gesture click performed: finger
+2025-11-02 10:41:20,123 - INFO - Gesture click: finger
+2025-11-02 10:41:21,751 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:41:37,899 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 10:41:37,900 - INFO - Settings saved successfully
+2025-11-02 10:41:39,554 - ERROR - Application error: [Errno 22] Invalid argument
+2025-11-02 10:41:39,555 - ERROR - Failed to start Smart Cursor system
+2025-11-02 10:45:24,841 - INFO - Settings loaded successfully
+2025-11-02 10:45:24,921 - INFO - MediaPipe initialized successfully
+2025-11-02 10:45:24,921 - INFO - Screen size: 1920x1080
+2025-11-02 10:45:25,905 - INFO - Webcam initialized successfully
+2025-11-02 10:45:26,055 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 10:45:28,212 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:45:30,232 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:45:32,240 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:45:34,247 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:45:36,041 - INFO - Gesture click: pinch
+2025-11-02 10:45:36,042 - INFO - Gesture click performed: pinch
+2025-11-02 10:45:36,263 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 10:45:56,335 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 10:45:56,341 - INFO - Settings saved successfully
+2025-11-02 10:45:58,017 - ERROR - Application error: [Errno 22] Invalid argument
+2025-11-02 10:45:58,017 - ERROR - Failed to start Smart Cursor system
+2025-11-02 11:01:26,872 - INFO - Settings loaded successfully
+2025-11-02 11:01:27,034 - INFO - MediaPipe initialized successfully
+2025-11-02 11:01:27,038 - INFO - Screen size: 1920x1080
+2025-11-02 11:01:28,595 - INFO - Webcam initialized successfully
+2025-11-02 11:01:28,760 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 11:01:28,762 - INFO - Starting Smart Cursor system...
+2025-11-02 11:01:28,762 - INFO - Initializing cursor processing...
+2025-11-02 11:01:28,763 - INFO - Starting GUI...
+2025-11-02 11:01:29,980 - INFO - Starting main processing loop...
+2025-11-02 11:01:31,062 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:32,299 - INFO - Gesture click: finger
+2025-11-02 11:01:32,309 - INFO - Gesture click performed: finger
+2025-11-02 11:01:32,676 - INFO - Gesture click: finger
+2025-11-02 11:01:32,676 - INFO - Gesture click performed: finger
+2025-11-02 11:01:33,145 - INFO - Gesture click: finger
+2025-11-02 11:01:33,147 - INFO - Gesture click performed: finger
+2025-11-02 11:01:33,180 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:33,352 - INFO - Gesture click: finger
+2025-11-02 11:01:33,352 - INFO - Gesture click performed: finger
+2025-11-02 11:01:33,727 - INFO - Gesture click: finger
+2025-11-02 11:01:33,728 - INFO - Gesture click performed: finger
+2025-11-02 11:01:33,947 - INFO - Gesture click: finger
+2025-11-02 11:01:33,948 - INFO - Gesture click performed: finger
+2025-11-02 11:01:34,250 - INFO - Gesture click: finger
+2025-11-02 11:01:34,256 - INFO - Gesture click performed: finger
+2025-11-02 11:01:34,684 - INFO - Gesture click: finger
+2025-11-02 11:01:34,684 - INFO - Gesture click performed: finger
+2025-11-02 11:01:34,893 - INFO - Gesture click: finger
+2025-11-02 11:01:34,901 - INFO - Gesture click performed: finger
+2025-11-02 11:01:35,307 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:35,510 - INFO - Gesture click: finger
+2025-11-02 11:01:35,510 - INFO - Gesture click performed: finger
+2025-11-02 11:01:35,717 - INFO - Gesture click: finger
+2025-11-02 11:01:35,717 - INFO - Gesture click performed: finger
+2025-11-02 11:01:36,118 - INFO - Gesture click: finger
+2025-11-02 11:01:36,130 - INFO - Gesture click performed: finger
+2025-11-02 11:01:36,383 - INFO - Gesture click: finger
+2025-11-02 11:01:36,407 - INFO - Gesture click performed: finger
+2025-11-02 11:01:36,794 - INFO - Gesture click: finger
+2025-11-02 11:01:36,794 - INFO - Gesture click performed: finger
+2025-11-02 11:01:37,182 - INFO - Gesture click: finger
+2025-11-02 11:01:37,182 - INFO - Gesture click performed: finger
+2025-11-02 11:01:37,411 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:37,493 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:01:37,495 - INFO - Gesture click performed: fist
+2025-11-02 11:01:37,849 - INFO - Gesture click: finger
+2025-11-02 11:01:37,855 - INFO - Gesture click performed: finger
+2025-11-02 11:01:38,063 - INFO - Gesture click: finger
+2025-11-02 11:01:38,066 - INFO - Gesture click performed: finger
+2025-11-02 11:01:38,385 - INFO - Gesture click: finger
+2025-11-02 11:01:38,385 - INFO - Gesture click performed: finger
+2025-11-02 11:01:38,703 - INFO - Gesture click: finger
+2025-11-02 11:01:38,703 - INFO - Gesture click performed: finger
+2025-11-02 11:01:39,104 - INFO - Gesture click: finger
+2025-11-02 11:01:39,107 - INFO - Gesture click performed: finger
+2025-11-02 11:01:39,688 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:41,800 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:43,937 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:46,037 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:46,506 - INFO - Gesture click: pinch
+2025-11-02 11:01:46,567 - INFO - Gesture click performed: pinch
+2025-11-02 11:01:47,212 - INFO - Gesture click: pinch
+2025-11-02 11:01:47,214 - INFO - Gesture click performed: pinch
+2025-11-02 11:01:48,197 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:50,331 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:52,461 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:54,565 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:56,660 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:01:58,699 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:00,781 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:02,787 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:04,805 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:06,840 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:08,892 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:11,073 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:13,166 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:15,270 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:17,346 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 11:02:17,352 - INFO - Settings saved successfully
+2025-11-02 11:02:17,370 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:02:19,010 - INFO - System interrupted by user
+2025-11-02 11:21:12,153 - INFO - Settings loaded successfully
+2025-11-02 11:21:12,246 - INFO - MediaPipe initialized successfully
+2025-11-02 11:21:12,279 - INFO - Screen size: 1920x1080
+2025-11-02 11:21:13,392 - INFO - Webcam initialized successfully
+2025-11-02 11:21:13,502 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 11:21:13,533 - INFO - Starting Smart Cursor system...
+2025-11-02 11:21:13,549 - INFO - Initializing cursor processing...
+2025-11-02 11:21:13,567 - INFO - Starting GUI...
+2025-11-02 11:21:14,700 - INFO - Starting main processing loop...
+2025-11-02 11:21:15,587 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:16,763 - INFO - Gesture click: finger
+2025-11-02 11:21:16,763 - INFO - Gesture click performed: finger
+2025-11-02 11:21:17,178 - INFO - Gesture click: finger
+2025-11-02 11:21:17,178 - INFO - Gesture click performed: finger
+2025-11-02 11:21:17,395 - INFO - Gesture click: finger
+2025-11-02 11:21:17,395 - INFO - Gesture click performed: finger
+2025-11-02 11:21:17,683 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:17,733 - INFO - Gesture click: finger
+2025-11-02 11:21:17,735 - INFO - Gesture click performed: finger
+2025-11-02 11:21:18,130 - INFO - Gesture click: finger
+2025-11-02 11:21:18,131 - INFO - Gesture click performed: finger
+2025-11-02 11:21:18,357 - INFO - Gesture click: finger
+2025-11-02 11:21:18,359 - INFO - Gesture click performed: finger
+2025-11-02 11:21:18,745 - INFO - Gesture click: finger
+2025-11-02 11:21:18,746 - INFO - Gesture click performed: finger
+2025-11-02 11:21:18,950 - INFO - Gesture click: finger
+2025-11-02 11:21:18,950 - INFO - Gesture click performed: finger
+2025-11-02 11:21:19,294 - INFO - Gesture click: finger
+2025-11-02 11:21:19,295 - INFO - Gesture click performed: finger
+2025-11-02 11:21:19,663 - INFO - Gesture click: pinch
+2025-11-02 11:21:19,663 - INFO - Gesture click performed: pinch
+2025-11-02 11:21:19,728 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:20,220 - INFO - Gesture click: finger
+2025-11-02 11:21:20,221 - INFO - Gesture click performed: finger
+2025-11-02 11:21:20,433 - INFO - Gesture click: finger
+2025-11-02 11:21:20,434 - INFO - Gesture click performed: finger
+2025-11-02 11:21:20,877 - INFO - Gesture click: finger
+2025-11-02 11:21:20,877 - INFO - Gesture click performed: finger
+2025-11-02 11:21:21,089 - INFO - Gesture click: finger
+2025-11-02 11:21:21,090 - INFO - Gesture click performed: finger
+2025-11-02 11:21:21,389 - INFO - Gesture click: finger
+2025-11-02 11:21:21,389 - INFO - Gesture click performed: finger
+2025-11-02 11:21:21,794 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:21,796 - INFO - Gesture click: finger
+2025-11-02 11:21:21,797 - INFO - Gesture click performed: finger
+2025-11-02 11:21:22,045 - INFO - Gesture click: finger
+2025-11-02 11:21:22,045 - INFO - Gesture click performed: finger
+2025-11-02 11:21:22,470 - INFO - Gesture click: finger
+2025-11-02 11:21:22,472 - INFO - Gesture click performed: finger
+2025-11-02 11:21:22,803 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:21:22,841 - INFO - Gesture click performed: fist
+2025-11-02 11:21:23,303 - INFO - Gesture click: pinch
+2025-11-02 11:21:23,303 - INFO - Gesture click performed: pinch
+2025-11-02 11:21:23,519 - INFO - Gesture click: finger
+2025-11-02 11:21:23,539 - INFO - Gesture click performed: finger
+2025-11-02 11:21:23,964 - INFO - Gesture click: finger
+2025-11-02 11:21:23,964 - INFO - Gesture click performed: finger
+2025-11-02 11:21:23,981 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:24,202 - INFO - Gesture click: finger
+2025-11-02 11:21:24,204 - INFO - Gesture click performed: finger
+2025-11-02 11:21:26,117 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:26,897 - INFO - Gesture click: finger
+2025-11-02 11:21:26,901 - INFO - Gesture click performed: finger
+2025-11-02 11:21:27,392 - INFO - Gesture click: finger
+2025-11-02 11:21:27,392 - INFO - Gesture click performed: finger
+2025-11-02 11:21:27,606 - INFO - Gesture click: finger
+2025-11-02 11:21:27,606 - INFO - Gesture click performed: finger
+2025-11-02 11:21:28,054 - INFO - Gesture click: finger
+2025-11-02 11:21:28,054 - INFO - Gesture click performed: finger
+2025-11-02 11:21:28,178 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:28,298 - INFO - Gesture click: finger
+2025-11-02 11:21:28,299 - INFO - Gesture click performed: finger
+2025-11-02 11:21:28,712 - INFO - Gesture click: finger
+2025-11-02 11:21:28,712 - INFO - Gesture click performed: finger
+2025-11-02 11:21:28,937 - INFO - Gesture click: finger
+2025-11-02 11:21:28,937 - INFO - Gesture click performed: finger
+2025-11-02 11:21:29,366 - INFO - Gesture click: finger
+2025-11-02 11:21:29,366 - INFO - Gesture click performed: finger
+2025-11-02 11:21:29,581 - INFO - Gesture click: finger
+2025-11-02 11:21:29,588 - INFO - Gesture click performed: finger
+2025-11-02 11:21:29,915 - INFO - Gesture click: finger
+2025-11-02 11:21:29,915 - INFO - Gesture click performed: finger
+2025-11-02 11:21:30,316 - INFO - Gesture click: pinch
+2025-11-02 11:21:30,318 - INFO - Gesture click performed: pinch
+2025-11-02 11:21:30,325 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:30,958 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:21:30,958 - INFO - Gesture click performed: fist
+2025-11-02 11:21:31,173 - INFO - Gesture click: finger
+2025-11-02 11:21:31,173 - INFO - Gesture click performed: finger
+2025-11-02 11:21:31,635 - INFO - Gesture click: finger
+2025-11-02 11:21:31,635 - INFO - Gesture click performed: finger
+2025-11-02 11:21:31,851 - INFO - Gesture click: finger
+2025-11-02 11:21:31,851 - INFO - Gesture click performed: finger
+2025-11-02 11:21:32,314 - INFO - Gesture click: finger
+2025-11-02 11:21:32,314 - INFO - Gesture click performed: finger
+2025-11-02 11:21:32,430 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:32,849 - INFO - Gesture click: finger
+2025-11-02 11:21:32,849 - INFO - Gesture click performed: finger
+2025-11-02 11:21:33,073 - INFO - Gesture click: finger
+2025-11-02 11:21:33,073 - INFO - Gesture click performed: finger
+2025-11-02 11:21:33,525 - INFO - Gesture click: finger
+2025-11-02 11:21:33,525 - INFO - Gesture click performed: finger
+2025-11-02 11:21:33,748 - INFO - Gesture click: finger
+2025-11-02 11:21:33,748 - INFO - Gesture click performed: finger
+2025-11-02 11:21:34,161 - INFO - Gesture click: finger
+2025-11-02 11:21:34,161 - INFO - Gesture click performed: finger
+2025-11-02 11:21:34,517 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:36,620 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:38,749 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:40,887 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:41,716 - INFO - Gesture click: finger
+2025-11-02 11:21:41,716 - INFO - Gesture click performed: finger
+2025-11-02 11:21:42,178 - INFO - Gesture click: finger
+2025-11-02 11:21:42,179 - INFO - Gesture click performed: finger
+2025-11-02 11:21:42,408 - INFO - Gesture click: finger
+2025-11-02 11:21:42,408 - INFO - Gesture click performed: finger
+2025-11-02 11:21:42,806 - INFO - Gesture click: finger
+2025-11-02 11:21:42,806 - INFO - Gesture click performed: finger
+2025-11-02 11:21:43,002 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:43,019 - INFO - Gesture click: finger
+2025-11-02 11:21:43,021 - INFO - Gesture click performed: finger
+2025-11-02 11:21:43,854 - INFO - Gesture click: finger
+2025-11-02 11:21:43,854 - INFO - Gesture click performed: finger
+2025-11-02 11:21:44,277 - INFO - Gesture click: finger
+2025-11-02 11:21:44,277 - INFO - Gesture click performed: finger
+2025-11-02 11:21:44,504 - INFO - Gesture click: finger
+2025-11-02 11:21:44,504 - INFO - Gesture click performed: finger
+2025-11-02 11:21:44,902 - INFO - Gesture click: finger
+2025-11-02 11:21:44,902 - INFO - Gesture click performed: finger
+2025-11-02 11:21:45,088 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:45,112 - INFO - Gesture click: finger
+2025-11-02 11:21:45,114 - INFO - Gesture click performed: finger
+2025-11-02 11:21:45,451 - INFO - Gesture click: finger
+2025-11-02 11:21:45,451 - INFO - Gesture click performed: finger
+2025-11-02 11:21:45,849 - INFO - Gesture click: finger
+2025-11-02 11:21:45,855 - INFO - Gesture click performed: finger
+2025-11-02 11:21:46,180 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:21:46,183 - INFO - Gesture click performed: fist
+2025-11-02 11:21:46,808 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:21:46,808 - INFO - Gesture click performed: fist
+2025-11-02 11:21:47,284 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:49,405 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:51,506 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:53,574 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:55,705 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:21:58,009 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:00,119 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:02,228 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:04,312 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:06,487 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:08,584 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:10,657 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:12,751 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:14,860 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:16,956 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:22:17,374 - WARNING - Mouse control timeout - safety shutdown
+2025-11-02 11:22:17,374 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 11:22:17,390 - INFO - Settings saved successfully
+2025-11-02 11:22:19,050 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:15,350 - INFO - Settings loaded successfully
+2025-11-02 11:26:15,432 - INFO - MediaPipe initialized successfully
+2025-11-02 11:26:15,440 - INFO - Screen size: 1920x1080
+2025-11-02 11:26:16,387 - INFO - Webcam initialized successfully
+2025-11-02 11:26:16,461 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 11:26:16,463 - INFO - Starting Smart Cursor system...
+2025-11-02 11:26:16,464 - INFO - Initializing cursor processing...
+2025-11-02 11:26:16,464 - INFO - Starting GUI...
+2025-11-02 11:26:17,545 - INFO - Starting main processing loop...
+2025-11-02 11:26:17,567 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:17,662 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:17,846 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:17,974 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:18,042 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:18,061 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:18,253 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:18,349 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:18,511 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:18,605 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:18,782 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:18,879 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:19,052 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:19,156 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:19,312 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:19,409 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:19,727 - INFO - Gesture click: pinch
+2025-11-02 11:26:19,727 - INFO - Gesture click performed: pinch
+2025-11-02 11:26:19,732 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:19,809 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:19,983 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:20,060 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:20,103 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:20,246 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:20,335 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:20,510 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:20,633 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:20,726 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:21,127 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:26:21,181 - INFO - Gesture click performed: fist
+2025-11-02 11:26:21,574 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:26:21,575 - INFO - Gesture click performed: fist
+2025-11-02 11:26:21,594 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:21,911 - INFO - Gesture click: pinch
+2025-11-02 11:26:21,911 - INFO - Gesture click performed: pinch
+2025-11-02 11:26:21,916 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:21,979 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:22,162 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:22,358 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:22,632 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:22,886 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:23,158 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:23,447 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:23,694 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:24,039 - INFO - Gesture click: finger
+2025-11-02 11:26:24,039 - INFO - Gesture click performed: finger
+2025-11-02 11:26:24,049 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:24,180 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:24,191 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:24,422 - INFO - Gesture click: finger
+2025-11-02 11:26:24,423 - INFO - Gesture click performed: finger
+2025-11-02 11:26:24,635 - INFO - Gesture click: finger
+2025-11-02 11:26:24,636 - INFO - Gesture click performed: finger
+2025-11-02 11:26:24,647 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:24,976 - INFO - Gesture click: finger
+2025-11-02 11:26:24,977 - INFO - Gesture click performed: finger
+2025-11-02 11:26:24,981 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:25,044 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:25,352 - INFO - Gesture click: finger
+2025-11-02 11:26:25,352 - INFO - Gesture click performed: finger
+2025-11-02 11:26:25,559 - INFO - Gesture click: finger
+2025-11-02 11:26:25,560 - INFO - Gesture click performed: finger
+2025-11-02 11:26:25,569 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:25,896 - INFO - Gesture click: finger
+2025-11-02 11:26:25,896 - INFO - Gesture click performed: finger
+2025-11-02 11:26:25,898 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:25,984 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:26,233 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:26,300 - INFO - Gesture click: finger
+2025-11-02 11:26:26,300 - INFO - Gesture click performed: finger
+2025-11-02 11:26:26,517 - INFO - Gesture click: finger
+2025-11-02 11:26:26,517 - INFO - Gesture click performed: finger
+2025-11-02 11:26:26,535 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:26,817 - INFO - Gesture click: finger
+2025-11-02 11:26:26,817 - INFO - Gesture click performed: finger
+2025-11-02 11:26:26,834 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:26,885 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:27,348 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:26:27,349 - INFO - Gesture click performed: fist
+2025-11-02 11:26:27,566 - INFO - Gesture click: finger
+2025-11-02 11:26:27,566 - INFO - Gesture click performed: finger
+2025-11-02 11:26:27,586 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:27,891 - INFO - Gesture click: finger
+2025-11-02 11:26:27,891 - INFO - Gesture click performed: finger
+2025-11-02 11:26:27,900 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:27,995 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:28,287 - INFO - Gesture click: finger
+2025-11-02 11:26:28,287 - INFO - Gesture click performed: finger
+2025-11-02 11:26:28,308 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:28,507 - INFO - Gesture click: finger
+2025-11-02 11:26:28,507 - INFO - Gesture click performed: finger
+2025-11-02 11:26:28,524 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:28,920 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:26:28,921 - INFO - Gesture click performed: fist
+2025-11-02 11:26:28,928 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:28,996 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:29,402 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:29,663 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:29,943 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:30,235 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:30,360 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:30,544 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:30,747 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:30,887 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:31,272 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:31,571 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:31,752 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:32,323 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:32,427 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:32,744 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:32,922 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:33,028 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:33,243 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:33,520 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:33,790 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:34,070 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:34,310 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:34,581 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:34,831 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:35,107 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:35,138 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:35,378 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:35,635 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:35,908 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:36,174 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:36,447 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:36,722 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:36,973 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:37,247 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:37,250 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:37,495 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:37,766 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:38,041 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:38,295 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:38,437 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:38,841 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:39,088 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:39,367 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:39,367 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:39,487 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:39,901 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:40,138 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:40,422 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:40,616 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:40,765 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:40,849 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:41,024 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:41,102 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:41,282 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:41,394 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:41,450 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:41,566 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:41,668 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:41,820 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:41,868 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:42,093 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:42,192 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:42,353 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:42,452 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:42,640 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:42,756 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:42,880 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:42,999 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:43,146 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:43,249 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:43,419 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:43,488 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:43,616 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:43,695 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:43,785 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:43,948 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:44,048 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:44,221 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:44,283 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:44,466 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:44,621 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:44,698 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:44,877 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:44,992 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:45,146 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:45,199 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:45,432 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:45,482 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:45,671 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:45,715 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:45,737 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:45,951 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:46,035 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:46,208 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:46,347 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:46,448 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:46,600 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:46,753 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:46,814 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:46,996 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:47,110 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:47,275 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:47,397 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:47,544 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:47,659 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:47,763 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:47,861 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:47,942 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:48,075 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:48,178 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:48,328 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:48,442 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:48,593 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:48,708 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:48,874 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:48,990 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:49,127 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:49,242 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:49,398 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:49,536 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:49,635 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:49,804 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:49,927 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:49,927 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:50,177 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:50,244 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:50,389 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:50,492 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:50,662 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:50,789 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:50,856 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,069 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,142 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,321 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,392 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,586 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,659 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,869 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,930 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:51,991 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:52,122 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:52,401 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:52,663 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:52,919 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:53,195 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:53,453 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:53,721 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:53,990 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:54,088 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:54,254 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:54,519 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:54,781 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:55,061 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:55,318 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:55,440 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:55,569 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:55,650 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:55,853 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:55,939 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:56,099 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:56,187 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:56,209 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:56,371 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:56,487 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:56,654 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:56,721 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:56,901 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:56,983 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:57,179 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:57,281 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:57,439 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:57,539 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:57,703 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:57,821 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:57,953 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:58,098 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:58,211 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:58,319 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:26:58,382 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:58,499 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:58,632 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:58,729 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:26:58,784 - WARNING - Mouse control timeout - safety shutdown
+2025-11-02 11:26:58,784 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 11:26:58,786 - INFO - Settings saved successfully
+2025-11-02 11:29:28,616 - INFO - Settings loaded successfully
+2025-11-02 11:29:28,685 - INFO - MediaPipe initialized successfully
+2025-11-02 11:29:28,685 - INFO - Screen size: 1920x1080
+2025-11-02 11:29:29,853 - INFO - Webcam initialized successfully
+2025-11-02 11:29:29,937 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 11:29:29,946 - INFO - Starting Smart Cursor system...
+2025-11-02 11:29:29,947 - INFO - Initializing cursor processing...
+2025-11-02 11:29:29,949 - INFO - Starting GUI...
+2025-11-02 11:29:31,074 - INFO - Starting main processing loop...
+2025-11-02 11:29:31,097 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,202 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,338 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,419 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,489 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,596 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,658 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,726 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,732 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:31,792 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,891 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:31,979 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:32,261 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:32,532 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:32,786 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:33,062 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:33,391 - INFO - Gesture click: finger
+2025-11-02 11:29:33,391 - INFO - Gesture click performed: finger
+2025-11-02 11:29:33,398 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:33,470 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:33,740 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:33,793 - INFO - Gesture click: finger
+2025-11-02 11:29:33,793 - INFO - Gesture click performed: finger
+2025-11-02 11:29:34,000 - INFO - Gesture click: finger
+2025-11-02 11:29:34,000 - INFO - Gesture click performed: finger
+2025-11-02 11:29:34,005 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:34,410 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:34,410 - INFO - Gesture click performed: fist
+2025-11-02 11:29:34,414 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:34,662 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:35,091 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:35,092 - INFO - Gesture click performed: fist
+2025-11-02 11:29:35,104 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:35,309 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:35,637 - INFO - Gesture click: finger
+2025-11-02 11:29:35,637 - INFO - Gesture click performed: finger
+2025-11-02 11:29:35,642 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:35,753 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:35,836 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:36,113 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:36,374 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:36,636 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:36,971 - INFO - Gesture click: finger
+2025-11-02 11:29:36,971 - INFO - Gesture click performed: finger
+2025-11-02 11:29:36,975 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:37,237 - INFO - Gesture click: finger
+2025-11-02 11:29:37,237 - INFO - Gesture click performed: finger
+2025-11-02 11:29:37,241 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:37,446 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:37,693 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:37,759 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:37,952 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:38,033 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:38,315 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:38,404 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:38,645 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:38,723 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:38,982 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:39,042 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:39,319 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:39,372 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:39,664 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:39,733 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:39,784 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:39,970 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:40,033 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:40,300 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:40,418 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:40,771 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:40,839 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:41,227 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:41,481 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:41,748 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:41,863 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:42,013 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:42,278 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:42,555 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:42,809 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:43,083 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:43,414 - INFO - Gesture click: finger
+2025-11-02 11:29:43,414 - INFO - Gesture click performed: finger
+2025-11-02 11:29:43,432 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:43,482 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:43,929 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:43,929 - INFO - Gesture click performed: fist
+2025-11-02 11:29:43,953 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:44,273 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:44,273 - INFO - Gesture click performed: fist
+2025-11-02 11:29:44,276 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:44,364 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:44,752 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:44,752 - INFO - Gesture click performed: fist
+2025-11-02 11:29:45,087 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:45,087 - INFO - Gesture click performed: fist
+2025-11-02 11:29:45,087 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:45,536 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:45,536 - INFO - Gesture click performed: fist
+2025-11-02 11:29:45,536 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:45,710 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:45,773 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:46,012 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:46,127 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:46,127 - INFO - Gesture click performed: fist
+2025-11-02 11:29:46,468 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:46,468 - INFO - Gesture click performed: fist
+2025-11-02 11:29:46,479 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:46,528 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:46,846 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:46,846 - INFO - Gesture click performed: fist
+2025-11-02 11:29:47,176 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:47,176 - INFO - Gesture click performed: fist
+2025-11-02 11:29:47,193 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:47,244 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:47,579 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:47,579 - INFO - Gesture click performed: fist
+2025-11-02 11:29:47,904 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:47,906 - INFO - Gesture click performed: fist
+2025-11-02 11:29:47,910 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:47,969 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:48,141 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:48,363 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:48,380 - INFO - Gesture click performed: fist
+2025-11-02 11:29:48,628 - INFO - Gesture click: finger
+2025-11-02 11:29:48,628 - INFO - Gesture click performed: finger
+2025-11-02 11:29:48,644 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:48,691 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:48,862 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:48,926 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:49,272 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:49,541 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:49,792 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:50,058 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:50,208 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:50,324 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:50,583 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:50,862 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:51,120 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:51,273 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:51,658 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:51,920 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:52,196 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:52,354 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:52,440 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:52,707 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:52,991 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:53,240 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:53,519 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:53,792 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:54,050 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:54,319 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:54,468 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:54,571 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:54,843 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:55,109 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:55,379 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:55,647 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:55,985 - INFO - Gesture click: finger
+2025-11-02 11:29:55,986 - INFO - Gesture click performed: finger
+2025-11-02 11:29:56,005 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:56,059 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:56,392 - INFO - Gesture click: finger
+2025-11-02 11:29:56,392 - INFO - Gesture click performed: finger
+2025-11-02 11:29:56,566 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:56,606 - INFO - Gesture click: finger
+2025-11-02 11:29:56,607 - INFO - Gesture click performed: finger
+2025-11-02 11:29:56,614 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:56,924 - INFO - Gesture click: finger
+2025-11-02 11:29:56,924 - INFO - Gesture click performed: finger
+2025-11-02 11:29:56,924 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:57,003 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:57,324 - INFO - Gesture click: finger
+2025-11-02 11:29:57,324 - INFO - Gesture click performed: finger
+2025-11-02 11:29:57,543 - INFO - Gesture click: finger
+2025-11-02 11:29:57,543 - INFO - Gesture click performed: finger
+2025-11-02 11:29:57,543 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:57,632 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:58,108 - INFO - Gesture click: finger
+2025-11-02 11:29:58,108 - INFO - Gesture click performed: finger
+2025-11-02 11:29:58,108 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:58,193 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:58,625 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:29:58,664 - INFO - Gesture click: finger
+2025-11-02 11:29:58,664 - INFO - Gesture click performed: finger
+2025-11-02 11:29:58,671 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:58,756 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:59,287 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:59,287 - INFO - Gesture click performed: fist
+2025-11-02 11:29:59,291 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:59,361 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:29:59,948 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:29:59,949 - INFO - Gesture click performed: fist
+2025-11-02 11:29:59,949 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:00,019 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:00,466 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:30:00,467 - INFO - Gesture click performed: fist
+2025-11-02 11:30:00,697 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:30:00,781 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:30:00,781 - INFO - Gesture click performed: fist
+2025-11-02 11:30:00,781 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:00,856 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:01,272 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:30:01,272 - INFO - Gesture click performed: fist
+2025-11-02 11:30:01,593 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:30:01,593 - INFO - Gesture click performed: fist
+2025-11-02 11:30:01,599 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:01,682 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:02,093 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:30:02,096 - INFO - Gesture click performed: fist
+2025-11-02 11:30:02,443 - INFO - Gesture click: right-click (fist)
+2025-11-02 11:30:02,443 - INFO - Gesture click performed: fist
+2025-11-02 11:30:02,443 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:02,530 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:02,808 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:30:02,945 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:03,207 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:03,480 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:03,740 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:04,001 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:04,275 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:04,538 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:04,787 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:04,876 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:30:05,073 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:05,321 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:05,604 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:05,942 - INFO - Gesture click: finger
+2025-11-02 11:30:05,942 - INFO - Gesture click performed: finger
+2025-11-02 11:30:05,942 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:06,043 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:06,325 - INFO - Gesture click: finger
+2025-11-02 11:30:06,325 - INFO - Gesture click performed: finger
+2025-11-02 11:30:06,543 - INFO - Gesture click: finger
+2025-11-02 11:30:06,543 - INFO - Gesture click performed: finger
+2025-11-02 11:30:06,543 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:06,642 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:06,873 - INFO - Gesture click: finger
+2025-11-02 11:30:06,873 - INFO - Gesture click performed: finger
+2025-11-02 11:30:06,976 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:30:07,091 - INFO - Gesture click: finger
+2025-11-02 11:30:07,091 - INFO - Gesture click performed: finger
+2025-11-02 11:30:07,091 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:07,176 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:07,423 - INFO - Gesture click: finger
+2025-11-02 11:30:07,423 - INFO - Gesture click performed: finger
+2025-11-02 11:30:07,639 - INFO - Gesture click: finger
+2025-11-02 11:30:07,639 - INFO - Gesture click performed: finger
+2025-11-02 11:30:07,639 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:07,742 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:07,990 - INFO - Gesture click: finger
+2025-11-02 11:30:07,990 - INFO - Gesture click performed: finger
+2025-11-02 11:30:08,206 - INFO - Gesture click: finger
+2025-11-02 11:30:08,206 - INFO - Gesture click performed: finger
+2025-11-02 11:30:08,224 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:08,266 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:08,539 - INFO - Gesture click: finger
+2025-11-02 11:30:08,539 - INFO - Gesture click performed: finger
+2025-11-02 11:30:08,756 - INFO - Gesture click: finger
+2025-11-02 11:30:08,756 - INFO - Gesture click performed: finger
+2025-11-02 11:30:08,773 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:08,809 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:09,082 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:30:09,174 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:09,453 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:09,710 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:09,981 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:10,239 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:10,513 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:10,787 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:11,031 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:11,187 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:30:11,320 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:11,581 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:11,837 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:12,116 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:12,354 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:12,629 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:12,918 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:13,163 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:13,303 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 11:30:13,435 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 11:30:13,697 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 11:30:13,697 - INFO - Settings saved successfully
+2025-11-02 11:30:15,299 - INFO - System interrupted by user
+2025-11-02 12:09:26,144 - INFO - Settings loaded successfully
+2025-11-02 12:09:26,144 - ERROR - MediaPipe initialization failed: 'SmartCursorStable' object has no attribute 'model_complexity'
+2025-11-02 12:09:26,144 - INFO - Screen size: 1920x1080
+2025-11-02 12:09:27,226 - INFO - Webcam initialized successfully
+2025-11-02 12:09:27,572 - INFO - PyTorch not available for GPU detection, using CPU
+2025-11-02 12:09:27,573 - INFO - Using optimized CPU processing
+2025-11-02 12:09:27,573 - INFO - Performance optimizations initialized
+2025-11-02 12:09:27,671 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 12:09:27,672 - INFO - Starting Smart Cursor system...
+2025-11-02 12:09:27,673 - INFO - Initializing cursor processing...
+2025-11-02 12:09:27,677 - INFO - Starting GUI...
+2025-11-02 12:09:29,449 - INFO - Starting main processing loop...
+2025-11-02 12:09:29,468 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:29,591 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:30,213 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:31,068 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:31,150 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:31,324 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:31,467 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:31,549 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:31,931 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:32,017 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:32,281 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:32,493 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:34,286 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:36,289 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:36,461 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:36,593 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:38,338 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:40,430 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:42,460 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:44,279 - INFO - Gesture click: finger
+2025-11-02 12:09:44,280 - INFO - Gesture click performed: finger
+2025-11-02 12:09:44,293 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:44,457 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:44,486 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:46,249 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:46,683 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:47,532 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:47,727 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:47,957 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:48,227 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:48,969 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:51,368 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:51,586 - INFO - Gesture click: finger
+2025-11-02 12:09:51,586 - INFO - Gesture click performed: finger
+2025-11-02 12:09:52,039 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:09:52,039 - INFO - Gesture click performed: fist
+2025-11-02 12:09:52,092 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:53,668 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:54,064 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:54,164 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:55,060 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:55,217 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:55,594 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:55,906 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:56,475 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:56,600 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:56,880 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:56,981 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:57,242 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:57,312 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:58,067 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:09:58,610 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:58,692 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:58,961 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:59,131 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:59,374 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:09:59,473 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:00,293 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:10:00,555 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:00,597 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:00,845 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:00,962 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:01,211 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:01,302 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:02,391 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:10:02,509 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:02,579 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:02,856 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:02,944 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:03,188 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:03,266 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:04,073 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:04,143 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:04,403 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:04,460 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:04,475 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:10:05,318 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:05,682 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:10:06,606 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:10:08,686 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:10:10,524 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 12:10:10,524 - INFO - Settings saved successfully
+2025-11-02 12:10:10,793 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:10:12,152 - INFO - System interrupted by user
+2025-11-02 12:19:14,157 - INFO - Settings loaded successfully
+2025-11-02 12:19:14,158 - ERROR - MediaPipe initialization failed: 'SmartCursorStable' object has no attribute 'model_complexity'
+2025-11-02 12:19:14,159 - INFO - Screen size: 1920x1080
+2025-11-02 12:19:15,159 - INFO - Webcam initialized successfully
+2025-11-02 12:19:15,232 - INFO - PyTorch not available for GPU detection, using CPU
+2025-11-02 12:19:15,232 - INFO - Using optimized CPU processing
+2025-11-02 12:19:15,233 - INFO - Performance optimizations initialized
+2025-11-02 12:19:15,320 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 12:19:15,330 - INFO - Starting Smart Cursor system...
+2025-11-02 12:19:15,333 - INFO - Initializing cursor processing...
+2025-11-02 12:19:15,336 - INFO - Starting GUI...
+2025-11-02 12:19:16,537 - INFO - Starting main processing loop...
+2025-11-02 12:19:16,670 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:16,793 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:16,973 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:17,069 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:17,237 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:17,290 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:17,750 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:17,882 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:18,413 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:19,095 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:19,213 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:19,635 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:19,756 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:20,141 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:20,397 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:20,755 - INFO - Gesture click: finger
+2025-11-02 12:19:20,756 - INFO - Gesture click performed: finger
+2025-11-02 12:19:20,768 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:21,153 - INFO - Gesture click: finger
+2025-11-02 12:19:21,153 - INFO - Gesture click performed: finger
+2025-11-02 12:19:21,160 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:21,248 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:21,542 - INFO - Gesture click: finger
+2025-11-02 12:19:21,542 - INFO - Gesture click performed: finger
+2025-11-02 12:19:21,660 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:21,759 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:21,775 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:22,399 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:22,803 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:23,145 - INFO - Gesture click: finger
+2025-11-02 12:19:23,186 - INFO - Gesture click performed: finger
+2025-11-02 12:19:23,272 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:23,380 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:23,726 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:23,890 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:24,156 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:24,489 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:24,743 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:25,325 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:25,519 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:25,933 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:26,106 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:26,301 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:26,776 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:19:26,869 - INFO - Gesture click performed: fist
+2025-11-02 12:19:27,394 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:19:27,447 - INFO - Gesture click performed: fist
+2025-11-02 12:19:27,636 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:27,758 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:28,517 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:28,634 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:28,802 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:29,036 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:29,561 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:30,091 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:30,388 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:30,724 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:30,773 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:31,316 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:31,900 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:19:31,901 - INFO - Gesture click performed: fist
+2025-11-02 12:19:31,973 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:32,501 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:32,822 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:32,969 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:19:32,969 - INFO - Gesture click performed: fist
+2025-11-02 12:19:32,978 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:33,052 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:33,431 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:33,707 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:34,090 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:34,377 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:34,644 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:34,884 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:34,916 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:35,158 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:35,551 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:35,960 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:36,320 - INFO - Gesture click: finger
+2025-11-02 12:19:36,321 - INFO - Gesture click performed: finger
+2025-11-02 12:19:36,341 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:36,804 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:19:36,804 - INFO - Gesture click performed: fist
+2025-11-02 12:19:36,811 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:36,904 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:36,985 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:37,328 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:19:37,328 - INFO - Gesture click performed: fist
+2025-11-02 12:19:37,666 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:19:37,666 - INFO - Gesture click performed: fist
+2025-11-02 12:19:37,675 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:37,968 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:38,111 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:38,603 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:38,861 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:39,125 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:39,205 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:39,408 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:39,671 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:39,951 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:40,322 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:40,620 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:40,884 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:41,323 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:41,324 - INFO - Gesture click: right-click (fist)
+2025-11-02 12:19:41,324 - INFO - Gesture click performed: fist
+2025-11-02 12:19:41,337 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:41,434 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:42,041 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:42,317 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:42,582 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:42,841 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:43,114 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:43,371 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:43,404 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:43,772 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:44,305 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:44,858 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:45,380 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:45,577 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:45,909 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:46,437 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:46,967 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:47,526 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:47,678 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:48,051 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:48,555 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:49,116 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:49,624 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:49,805 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:50,176 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:50,551 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:50,831 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:51,101 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:51,501 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:51,741 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:52,013 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:52,021 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:52,271 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:52,680 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:52,946 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:53,221 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:53,484 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:53,746 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:53,861 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:54,178 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:54,280 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:54,531 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:54,813 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:55,079 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:55,336 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:55,601 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 12:19:56,001 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 12:19:56,004 - INFO - Settings saved successfully
+2025-11-02 12:19:56,331 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:19:58,421 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:20:00,496 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:20:02,606 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:20:04,722 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:20:06,837 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:20:08,936 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 12:20:09,823 - INFO - System interrupted by user
+2025-11-02 13:21:47,393 - INFO - Settings loaded successfully
+2025-11-02 13:21:47,393 - ERROR - MediaPipe initialization failed: 'SmartCursorStable' object has no attribute 'model_complexity'
+2025-11-02 13:21:47,393 - INFO - Screen size: 1920x1080
+2025-11-02 13:21:48,828 - INFO - Webcam initialized successfully
+2025-11-02 13:21:48,903 - INFO - PyTorch not available for GPU detection, using CPU
+2025-11-02 13:21:48,904 - INFO - Using optimized CPU processing
+2025-11-02 13:21:48,904 - INFO - Performance optimizations initialized
+2025-11-02 13:21:49,026 - INFO - Initialized Kalman Filter stabilizer (process_noise=0.003, measurement_noise=0.03)
+2025-11-02 13:21:49,053 - INFO - Starting Smart Cursor system...
+2025-11-02 13:21:49,063 - INFO - Initializing cursor processing...
+2025-11-02 13:21:49,068 - INFO - Starting GUI...
+2025-11-02 13:21:50,300 - INFO - Starting main processing loop...
+2025-11-02 13:21:50,330 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:50,512 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:50,761 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:50,840 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:51,192 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:21:51,231 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:51,500 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:51,762 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:52,036 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:52,296 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:52,565 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:52,825 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:53,197 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:21:53,216 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:53,610 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:53,896 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:54,156 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:54,504 - INFO - Gesture click: finger
+2025-11-02 13:21:54,504 - INFO - Gesture click performed: finger
+2025-11-02 13:21:54,518 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:54,618 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:54,905 - INFO - Gesture click: finger
+2025-11-02 13:21:54,905 - INFO - Gesture click performed: finger
+2025-11-02 13:21:54,944 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:55,220 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:21:55,337 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:55,624 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:56,065 - INFO - Gesture click: right-click (fist)
+2025-11-02 13:21:56,070 - INFO - Gesture click performed: fist
+2025-11-02 13:21:56,106 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:56,686 - INFO - Gesture click: right-click (fist)
+2025-11-02 13:21:56,696 - INFO - Gesture click performed: fist
+2025-11-02 13:21:56,720 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:56,949 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:57,193 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:57,314 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:21:57,469 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:57,737 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:57,993 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:58,398 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:58,676 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:58,921 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:59,193 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:59,332 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:21:59,454 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:21:59,991 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:00,393 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:00,653 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:00,928 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:01,190 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:01,423 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:01,463 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:01,710 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:01,995 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:02,247 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:02,507 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:02,794 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:03,052 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:03,295 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:03,507 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:03,580 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:03,842 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:04,104 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:04,365 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:04,631 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:04,904 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:05,170 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:05,447 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:05,604 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:05,717 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:05,936 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:06,062 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:06,318 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:06,417 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:06,726 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:06,812 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:07,071 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:07,156 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:07,512 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:07,594 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:07,685 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:07,865 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:07,970 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:08,372 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:08,638 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:09,101 - INFO - Gesture click: right-click (fist)
+2025-11-02 13:22:09,101 - INFO - Gesture click performed: fist
+2025-11-02 13:22:09,154 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:09,718 - INFO - Gesture click: right-click (fist)
+2025-11-02 13:22:09,718 - INFO - Gesture click performed: fist
+2025-11-02 13:22:09,769 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:09,822 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:10,284 - INFO - Gesture click: right-click (fist)
+2025-11-02 13:22:10,284 - INFO - Gesture click performed: fist
+2025-11-02 13:22:10,284 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:10,352 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:10,757 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:11,018 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:11,417 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:11,877 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:11,955 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:12,351 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:12,609 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:12,878 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:13,156 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:13,410 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:13,812 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:13,953 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:14,210 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:14,475 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:14,738 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:15,011 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:15,401 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:15,812 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:16,029 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:16,071 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:16,337 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:16,605 - ERROR - Optical flow initialization error: module 'cv2' has no attribute 'createOptFlow_DualTVL1'
+2025-11-02 13:22:16,978 - INFO - Shutting down Smart Cursor High Performance System
+2025-11-02 13:22:16,978 - INFO - Settings saved successfully
+2025-11-02 13:22:18,137 - ERROR - Status update error: main thread is not in main loop
+2025-11-02 13:22:18,557 - INFO - System interrupted by user

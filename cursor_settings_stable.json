@@ -1,0 +1,15 @@
+{
+    "smoothing": 0.7,
+    "dwell_time": 2.0,
+    "voice_feedback": false,
+    "sound_feedback": true,
+    "gesture_recognition": true,
+    "adaptive_speed": false,
+    "tracking_type": "hand",
+    "tracking_sensitivity": 0.8,
+    "multi_tracking": false,
+    "stabilizer_method": "kalman",
+    "stabilizer_alpha": 0.7,
+    "stabilizer_process_noise": 0.003,
+    "stabilizer_measurement_noise": 0.03
+}

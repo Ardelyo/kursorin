@@ -1,0 +1,8 @@
+{
+    "smoothing": 0.7,
+    "dwell_time": 2.0,
+    "voice_feedback": false,
+    "sound_feedback": true,
+    "gesture_recognition": true,
+    "adaptive_speed": false
+}

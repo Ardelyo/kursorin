@@ -101,7 +101,15 @@ def launch_application():
             sys.path.insert(0, str(modules_dir))
 
         # Import and launch the application
-        import main_application
+        import importlib.util
+        main_app_path = modules_dir / "main_application.py"
+        if main_app_path.exists():
+            spec = importlib.util.spec_from_file_location("main_application", str(main_app_path))
+            main_application = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(main_application)
+        else:
+            # fallback to standard import (if module is on sys.path)
+            main_application = __import__("main_application")
         main_application.main()
 
     except Exception as e:
