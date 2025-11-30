@@ -95,7 +95,7 @@ def launch_application():
 
         # Add the modules directory to Python path
         current_dir = Path(__file__).parent
-        modules_dir = current_dir / "Core" / "modules"
+        modules_dir = current_dir / "src"
 
         if str(modules_dir) not in sys.path:
             sys.path.insert(0, str(modules_dir))

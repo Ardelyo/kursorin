@@ -47,7 +47,7 @@ class SettingsManager:
         'theme': 'default'
     }
 
-    def __init__(self, settings_file: str = 'cursor_settings.json'):
+    def __init__(self, settings_file: str = 'config/cursor_settings.json'):
         self.settings_file = settings_file
         self.settings = self.DEFAULT_SETTINGS.copy()
         self.load_settings()

@@ -1,132 +1,69 @@
-# 🖱️ Smart Cursor Control System - Refactored & Modular
+# 🖱️ Kursorin: Kontrol Kursor Pintar (Head & Hand Tracking)
 
-Welcome to the completely refactored Smart Cursor Control system! Large files have been broken down into focused, maintainable modules for easier editing and understanding.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
 
-## ✨ What's New
+**Kursorin** adalah aplikasi open-source yang memungkinkan Anda mengontrol kursor mouse komputer menggunakan gerakan kepala dan tangan. Dirancang untuk aksesibilitas dan kemudahan penggunaan tanpa perangkat keras khusus—hanya webcam standar.
 
-- **🔧 Modular Architecture**: Monolithic files split into 7 focused modules
-- **📦 Easy to Edit**: Each component has a single responsibility
-- **🚀 Simplified Launch**: Single launcher with automatic dependency checking
-- **🧹 Clean Structure**: Removed duplicates and unnecessary files
+## ✨ Fitur Utama
 
-## 📁 Folder Structure
+- **👁️ Pelacakan Kepala (Head Tracking)**: Gerakkan kursor dengan menolehkan kepala. Cocok untuk pengguna dengan keterbatasan mobilitas tangan.
+- **🖐️ Pelacakan Tangan (Hand Tracking)**: Kontrol kursor dan klik menggunakan gestur tangan intuitif.
+- **🚀 Ringan & Cepat**: Dibangun dengan Python dan dioptimalkan untuk performa tinggi.
+- **♿ Fokus Aksesibilitas**: Dirancang untuk membantu pengguna difabel mengoperasikan komputer dengan mandiri.
 
-### 🎯 **Current_Version/** - Latest Modular System
-**Start Here!** This contains the refactored version with modular architecture.
+## 📁 Struktur Proyek
 
-**Core Components:**
-- `modules/` - 7 focused modules (settings, GUI, cursor control, gestures, tracking, performance, main app)
-- `launch.py` - Smart launcher with dependency checking
-- `START.bat` - Quick Windows launcher
-- `requirements.txt` - Streamlined dependencies
+Proyek ini telah direstrukturisasi agar lebih rapi dan mudah dikembangkan:
 
-**To Start:**
-1. Double-click `START.bat` OR
-2. Run `python launch.py`
+```
+kursorin/
+├── src/                # Kode sumber utama
+│   ├── trackers/       # Modul pelacakan (Head, Hand)
+│   ├── ui/             # Antarmuka Pengguna (GUI)
+│   └── utils/          # Utilitas sistem
+├── config/             # File konfigurasi
+├── docs/               # Dokumentasi lengkap
+├── assets/             # Aset visual
+└── tests/              # Unit testing
+```
 
-### 📚 **Archive/** - Previous Versions
-Older versions of the cursor system for reference:
-- `camera_cursor_v4.py` - Last stable version before accessibility upgrade
-- `camera_cursor_v3.py` - Version with basic AI
-- `camera_cursor_v2.py` - Version with UI improvements
-- `camera_cursor.py` - Original basic version
-- `camera_control_ui.py` - Old UI experiments
+## 🚀 Cara Memulai
 
-### 🔧 **Tools/** - Development & Testing
-Utilities for testing and improving the system:
-- `performance_test.py` - Test system performance
-- `test_system.py` - General testing scripts
-- `ai_insights.py` - AI analysis tools
-- `train_ai.py` - AI training utilities
-- `create_icon.py` - Icon creation tool
+### Prasyarat
+- Python 3.8 atau lebih baru
+- Webcam yang berfungsi
 
-### ⚙️ **Config/** - Configuration Files
-System settings and preferences:
-- `ui_settings.json` - GUI preferences
+### Instalasi
 
-### 🎨 **Assets/** - Images & Resources
-Visual assets for the application:
-- `camera_icon.ico` - Application icon (Windows)
-- `camera_icon.png` - Application icon (PNG)
+1.  **Clone repositori ini:**
+    ```bash
+    git clone https://github.com/username/kursorin.git
+    cd kursorin
+    ```
 
-### 📖 **Docs/** - Documentation
-Documentation and planning:
-- `readme.md` - Previous documentation
-- `evolution_plan.md` - Development roadmap
+2.  **Instal dependensi:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-### 📊 **Logs/** - System Logs
-Application logs and debug information:
-- `cursor_system.log` - System activity log
+3.  **Jalankan aplikasi:**
+    ```bash
+    python launch.py
+    ```
 
-## 🚀 Quick Start Guide
+## 📖 Dokumentasi
 
-### For Beginners:
-1. **Go to `Current_Version/` folder**
-2. **Double-click `START.bat`** (Windows)
-3. **Follow the on-screen instructions**
+- [Panduan Folder](docs/FOLDER_GUIDE.md)
+- [Rencana Mode Gaming](docs/GAMING_MODE_PLAN.md)
+- [Rencana Mode Mengetik](docs/TYPING_MODE_PLAN.md)
+- [Rencana Eye Tracking](docs/EYE_TRACKING_PLAN.md)
 
-### For Advanced Users:
-1. **Go to `Current_Version/` folder**
-2. **Run:** `pip install -r requirements.txt`
-3. **Run:** `python launch.py`
+## 🤝 Berkontribusi
 
-## 🎮 How to Use
+Kami sangat menyambut kontribusi dari komunitas! Silakan baca [CONTRIBUTING.md](CONTRIBUTING.md) untuk panduan cara berkontribusi.
 
-### Control Modes:
-- **👁️ Eye Tracking**: Look at screen to move cursor
-- **🖐️ Hand Tracking**: Use hand gestures
-- **🌐 Web Mode**: Optimized for browsing
-- **🎯 Gaming Mode**: Enhanced precision
+## 📄 Lisensi
 
-### Accessibility Features:
-- **Voice Feedback**: Speaks actions aloud
-- **Dwell Clicking**: Hold cursor still to click
-- **Keyboard Shortcuts**: Ctrl+Shift+keys for control
-- **High Contrast**: Better visibility
-
-### Keyboard Shortcuts:
-- `Ctrl+Shift+E` - Eye Tracking Mode
-- `Ctrl+Shift+H` - Hand Tracking Mode
-- `Ctrl+Shift+W` - Web Mode
-- `Ctrl+Shift+G` - Gaming Mode
-- `Ctrl+Shift+Q` - Quit System
-
-## 🆘 Troubleshooting
-
-### If it doesn't start:
-1. Check `Logs/cursor_system.log` for errors
-2. Make sure your webcam is working
-3. Try running the launcher first
-
-### Performance issues:
-1. Close other applications
-2. Ensure good lighting for camera
-3. Run calibration in the GUI
-
-## 🛠️ Development
-
-### Adding Features:
-1. Look at files in `Tools/` for testing
-2. Check `Docs/evolution_plan.md` for roadmap
-3. Previous versions in `Archive/` for reference
-
-### Configuration:
-- Edit `Config/ui_settings.json` for preferences
-- Check `requirements.txt` for dependencies
-
-## 📞 Support
-
-- **Beginners**: Start with `Current_Version/launch.bat`
-- **Advanced**: Check `Current_Version/smart_cursor_accessibility.py`
-- **Debug**: Look in `Logs/` folder
-- **Old Versions**: Check `Archive/` folder
-
----
-
-**🎯 Quick Navigation:**
-- **To use the system** → `Current_Version/`
-- **For help** → Read this file
-- **For troubleshooting** → Check `Logs/`
-- **For development** → Look in `Tools/` and `Archive/`
-
-Happy cursor controlling! 🖱️✨
+Proyek ini dilisensikan di bawah lisensi MIT. Lihat file [LICENSE](LICENSE) untuk detailnya.
