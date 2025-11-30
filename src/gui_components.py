@@ -92,7 +92,7 @@ class ControlPanel:
         modes = [
             ("👆 Finger Tracking", "normal"),
             ("👁️ Eye Tracking", "eye_tracking"),
-            ("🎯 Gaming", "gaming"),
+            ("👤 Head Tracking", "head_tracking"),
             ("⌨️ Typing", "typing")
         ]
 
@@ -232,6 +232,17 @@ For more detailed information, check the logs and documentation.
         text_area.insert(tk.END, info_text)
         text_area.config(state=tk.DISABLED)
 
+    def stop_system(self):
+        """Stop the system"""
+        if messagebox.askyesno("Stop System", "Are you sure you want to stop the Smart Cursor system?"):
+            if self.gui:
+                self.gui.quit()
+
+    def run(self):
+        """Start the GUI main loop"""
+        if self.gui:
+            self.gui.mainloop()
+
     def start_calibration(self):
         """Start calibration process"""
         if self.current_mode != "eye_tracking":
@@ -331,13 +342,4 @@ class CalibrationWindow:
         """Close the calibration window"""
         self.window.destroy()
 
-    def stop_system(self):
-        """Stop the system"""
-        if messagebox.askyesno("Stop System", "Are you sure you want to stop the Smart Cursor system?"):
-            if self.gui:
-                self.gui.quit()
 
-    def run(self):
-        """Start the GUI main loop"""
-        if self.gui:
-            self.gui.mainloop()

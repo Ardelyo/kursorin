@@ -78,7 +78,7 @@ class GestureRecognizer:
             # ===== GESTURE DETECTION LOGIC =====
 
             # 1. PINCH GESTURE: Thumb and index finger tips are very close
-            if (thumb_index_dist < 0.04 and  # Very close
+            if (thumb_index_dist < 0.06 and  # Relaxed threshold (was 0.04)
                 index_extended and  # Index finger extended
                 curled_count >= 2 and  # At least 2 other fingers curled
                 thumb_extended):  # Thumb is extended (not tucked)

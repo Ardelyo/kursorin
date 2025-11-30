@@ -132,10 +132,12 @@ class SmartCursorApplication:
             self.tracking_manager.set_multi_tracking(False)
         elif mode == "eye_tracking":
             self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.EYE)
-        elif mode == "gaming":
-            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.FINGER)
-            self.tracking_manager.set_sensitivity(0.95)
-            self.cursor_controller.set_smoothing_factor(0.3)  # Less smoothing for faster response
+        elif mode == "eye_tracking":
+            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.EYE)
+        elif mode == "head_tracking":
+            self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.HEAD)
+            self.tracking_manager.set_sensitivity(0.7)
+            self.cursor_controller.set_smoothing_factor(0.5)
         elif mode == "typing":
             self.tracking_manager.set_tracking_type(tracking_engines.TrackingType.FINGER)
             self.tracking_manager.set_sensitivity(0.8)
@@ -218,7 +220,8 @@ class SmartCursorApplication:
 
             # Update display
             display_frame = self._update_display(
-                processed_frame, (cursor_x, cursor_y), detection_found, gesture
+                processed_frame, (cursor_x, cursor_y), detection_found, gesture,
+                holistic_results, hand_results
             )
 
             return display_frame, detection_found, gesture
@@ -242,7 +245,8 @@ class SmartCursorApplication:
             pass
 
     def _update_display(self, frame: np.ndarray, cursor_pos: Tuple[int, int],
-                        detection_found: bool, gesture: Optional[str]) -> np.ndarray:
+                        detection_found: bool, gesture: Optional[str],
+                        holistic_results=None, hand_results=None) -> np.ndarray:
         """Update the display frame with overlays"""
         display_frame = frame.copy()
 
@@ -252,14 +256,16 @@ class SmartCursorApplication:
             display_frame = self.text_display.draw_text_display(display_frame)
 
         # Draw landmarks
-        if hasattr(self, 'holistic') and self.holistic:
+        if holistic_results and holistic_results.face_landmarks:
             self.mp_drawing.draw_landmarks(
-                display_frame, self.holistic_results.face_landmarks,
-                self.mp_holistic.FACEMESH_CONTOURS
+                display_frame, holistic_results.face_landmarks,
+                self.mp_holistic.FACEMESH_CONTOURS,
+                self.mp_drawing.DrawingSpec(color=(80,110,10), thickness=1, circle_radius=1),
+                self.mp_drawing.DrawingSpec(color=(80,256,121), thickness=1, circle_radius=1)
             )
 
-        if hasattr(self, 'hand_results') and self.hand_results:
-            for hand_landmarks in self.hand_results.multi_hand_landmarks:
+        if hand_results and hand_results.multi_hand_landmarks:
+            for hand_landmarks in hand_results.multi_hand_landmarks:
                 self.mp_drawing.draw_landmarks(
                     display_frame, hand_landmarks, self.mp_hands.HAND_CONNECTIONS
                 )
