@@ -20,7 +20,9 @@ import gesture_recognition
 import tracking_engines
 import performance_optimizer
 import virtual_keyboard
+import virtual_keyboard
 import text_display
+import context_manager
 
 
 class SmartCursorApplication:
@@ -35,11 +37,12 @@ class SmartCursorApplication:
 
         # Initialize components
         self.performance_optimizer = performance_optimizer.PerformanceOptimizer()
-        self.tracking_manager = tracking_engines.TrackingEngineManager(self.screen_width, self.screen_height)
+        self.tracking_manager = tracking_engines.TrackingEngineManager(self.screen_width, self.screen_height, self.settings_manager)
         self.cursor_controller = cursor_control.CursorController(self.screen_width, self.screen_height)
         self.gesture_recognizer = gesture_recognition.GestureRecognizer()
         self.virtual_keyboard = virtual_keyboard.VirtualKeyboardDisplay(self.screen_width, self.screen_height)
         self.text_display = text_display.TextDisplay(self.screen_width, self.screen_height)
+        self.context_manager = context_manager.ContextManager()
 
         # Initialize MediaPipe
         self.mp_holistic = mp.solutions.holistic
@@ -111,6 +114,7 @@ class SmartCursorApplication:
 
         self.gui = gui_components.ControlPanel(
             self.settings_manager,
+            self.tracking_manager,
             on_mode_change=on_mode_change,
             on_setting_change=on_setting_change
         )
@@ -314,6 +318,15 @@ class SmartCursorApplication:
 
                 # Process frame
                 display_frame, detection_found, gesture = self.process_frame(frame)
+
+                # Check context for auto mode switching
+                suggested_mode = self.context_manager.check_context()
+                if suggested_mode and suggested_mode != self.current_mode:
+                    # Auto-switch mode (could add a user preference check here)
+                    # For now, we'll just log it and maybe show a notification, 
+                    # or switch if it's a strong match. 
+                    # Let's auto-switch for seamless experience.
+                    self.gui.set_mode(suggested_mode) # Update GUI which calls set_mode
 
                 # Update GUI status
                 if self.gui:

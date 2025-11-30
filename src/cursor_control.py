@@ -33,6 +33,9 @@ class CursorController:
         self.prev_cursor_x = screen_width // 2
         self.prev_cursor_y = screen_height // 2
         self.smoothing_factor = 0.7
+        self.dynamic_smoothing = False
+        self.precision_mode = False
+        self.precision_factor = 0.3
 
         # Thread safety
         self.lock = threading.Lock()
@@ -49,9 +52,26 @@ class CursorController:
         with self.lock:
             try:
                 # Apply smoothing if enabled
-                if smooth and self.smoothing_factor > 0:
-                    target_x = self.prev_cursor_x + (target_x - self.prev_cursor_x) * (1 - self.smoothing_factor)
-                    target_y = self.prev_cursor_y + (target_y - self.prev_cursor_y) * (1 - self.smoothing_factor)
+                # Apply smoothing if enabled
+                if smooth:
+                    alpha = self.smoothing_factor
+                    
+                    # Dynamic smoothing: adjust alpha based on speed
+                    if self.dynamic_smoothing:
+                        dist = np.sqrt((target_x - self.prev_cursor_x)**2 + (target_y - self.prev_cursor_y)**2)
+                        # If moving fast (flick), lower alpha (less smoothing, faster response)
+                        # If moving slow (aim), higher alpha (more smoothing, precision)
+                        # Map dist 0-100 to alpha 0.9-0.1
+                        speed_factor = min(1.0, dist / 100.0)
+                        alpha = 0.9 - (0.8 * speed_factor)
+                        
+                    target_x = self.prev_cursor_x + (target_x - self.prev_cursor_x) * (1 - alpha)
+                    target_y = self.prev_cursor_y + (target_y - self.prev_cursor_y) * (1 - alpha)
+
+                # Precision mode: dampen movement amplitude
+                if self.precision_mode:
+                    target_x = self.prev_cursor_x + (target_x - self.prev_cursor_x) * self.precision_factor
+                    target_y = self.prev_cursor_y + (target_y - self.prev_cursor_y) * self.precision_factor
 
                 # Ensure coordinates are within screen bounds
                 target_x = max(0, min(target_x, self.screen_width - 1))
@@ -196,6 +216,16 @@ class CursorController:
         """Set cursor smoothing factor"""
         self.smoothing_factor = max(0.0, min(factor, 1.0))
         logging.info(f"Smoothing factor set to {self.smoothing_factor}")
+
+    def set_dynamic_smoothing(self, enabled: bool):
+        """Enable/disable dynamic smoothing"""
+        self.dynamic_smoothing = enabled
+        logging.info(f"Dynamic smoothing {'enabled' if enabled else 'disabled'}")
+
+    def set_precision_mode(self, enabled: bool):
+        """Enable/disable precision mode"""
+        self.precision_mode = enabled
+        logging.info(f"Precision mode {'enabled' if enabled else 'disabled'}")
 
     def get_cursor_position(self) -> Tuple[int, int]:
         """Get current cursor position"""

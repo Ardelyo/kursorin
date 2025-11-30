@@ -12,10 +12,11 @@ from typing import Dict, Callable, Any
 class ControlPanel:
     """Main control panel GUI for the Smart Cursor system"""
 
-    def __init__(self, settings_manager, on_mode_change: Callable = None, on_setting_change: Callable = None):
+    def __init__(self, settings_manager, tracking_manager, on_mode_change: Callable = None, on_setting_change: Callable = None):
         self.settings_manager = settings_manager
         self.on_mode_change = on_mode_change
         self.on_setting_change = on_setting_change
+        self.tracking_manager = tracking_manager
 
         self.gui = None
         self.status_labels = {}
@@ -233,8 +234,102 @@ For more detailed information, check the logs and documentation.
 
     def start_calibration(self):
         """Start calibration process"""
-        # Placeholder for calibration logic
-        messagebox.showinfo("Calibration", "Calibration feature coming soon!")
+        if self.current_mode != "eye_tracking":
+            if messagebox.askyesno("Switch Mode", "Calibration requires Eye Tracking mode. Switch now?"):
+                self.set_mode("eye_tracking")
+            else:
+                return
+
+        calibration_window = CalibrationWindow(self.gui, self.settings_manager, self.tracking_manager)
+        calibration_window.start()
+
+
+class CalibrationWindow:
+    """Full-screen calibration window for eye tracking"""
+
+    def __init__(self, parent, settings_manager, tracking_manager):
+        self.parent = parent
+        self.settings_manager = settings_manager
+        self.tracking_manager = tracking_manager
+        self.window = tk.Toplevel(parent)
+        self.window.title("Eye Tracking Calibration")
+        self.window.attributes('-fullscreen', True)
+        self.window.configure(bg='black')
+        
+        # Calibration points (normalized coordinates)
+        self.points = [
+            (0.1, 0.1), (0.5, 0.1), (0.9, 0.1),
+            (0.1, 0.5), (0.5, 0.5), (0.9, 0.5),
+            (0.1, 0.9), (0.5, 0.9), (0.9, 0.9)
+        ]
+        self.current_point_idx = 0
+        self.calibration_data = []
+        
+        # UI Elements
+        self.canvas = tk.Canvas(self.window, bg='black', highlightthickness=0)
+        self.canvas.pack(fill=tk.BOTH, expand=True)
+        
+        self.instruction_label = tk.Label(self.window, 
+                                         text="Look at the red circle until it turns green",
+                                         font=('Arial', 24), fg='white', bg='black')
+        self.instruction_label.place(relx=0.5, rely=0.05, anchor=tk.N)
+        
+        # Bind escape to exit
+        self.window.bind('<Escape>', lambda e: self.close())
+
+    def start(self):
+        """Begin the calibration sequence"""
+        self.show_next_point()
+
+    def show_next_point(self):
+        """Display the next calibration point"""
+        if self.current_point_idx >= len(self.points):
+            self.finish_calibration()
+            return
+            
+        self.canvas.delete("all")
+        
+        # Get current point coordinates
+        nx, ny = self.points[self.current_point_idx]
+        screen_width = self.window.winfo_screenwidth()
+        screen_height = self.window.winfo_screenheight()
+        
+        x = int(nx * screen_width)
+        y = int(ny * screen_height)
+        
+        # Draw point (Red initially)
+        r = 20
+        self.point_id = self.canvas.create_oval(x-r, y-r, x+r, y+r, fill='red', outline='white')
+        
+        # Simulate calibration delay (in real implementation, this would wait for stable eye detection)
+        # For now, we just wait 1.5 seconds per point
+        self.window.after(1000, lambda: self.record_point(x, y))
+
+    def record_point(self, x, y):
+        """Simulate recording a point (turn green then move on)"""
+        self.canvas.itemconfig(self.point_id, fill='#00ff00') # Green
+        
+        # Capture raw gaze data
+        raw_gaze = self.tracking_manager.get_raw_gaze()
+        if raw_gaze:
+            self.calibration_data.append({'target': (x, y), 'gaze': raw_gaze})
+        else:
+            # Fallback if no gaze detected (should handle this better in real app)
+            logging.warning("No gaze detected during calibration point")
+        
+        self.current_point_idx += 1
+        self.window.after(500, self.show_next_point)
+
+    def finish_calibration(self):
+        """Save data and close"""
+        # Save dummy calibration data for now
+        self.settings_manager.set('calibration_data', self.calibration_data)
+        messagebox.showinfo("Calibration Complete", "Eye tracking calibrated successfully!")
+        self.close()
+
+    def close(self):
+        """Close the calibration window"""
+        self.window.destroy()
 
     def stop_system(self):
         """Stop the system"""

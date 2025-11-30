@@ -129,8 +129,40 @@ class HeadTrackingEngine(TrackingEngine):
 class EyeTrackingEngine(TrackingEngine):
     """Eye gaze tracking using pupil position within eye region"""
 
+    def __init__(self, screen_width: int, screen_height: int, settings_manager=None):
+        super().__init__(screen_width, screen_height)
+        self.settings_manager = settings_manager
+        self.calibration_data = None
+        self.x_bounds = (0.0, 1.0)
+        self.y_bounds = (0.0, 1.0)
+        self.last_raw_gaze = None
+
+    def get_raw_gaze(self) -> Optional[Tuple[float, float]]:
+        """Get the last calculated raw gaze ratios"""
+        return self.last_raw_gaze
+
+    def update_calibration(self):
+        """Update calibration bounds from settings"""
+        if self.settings_manager:
+            data = self.settings_manager.get('calibration_data')
+            if data and len(data) >= 4: # Need at least corners
+                # Simple min-max calibration
+                # Find min/max gaze values from calibration points
+                gaze_xs = [p['gaze'][0] for p in data]
+                gaze_ys = [p['gaze'][1] for p in data]
+                
+                # Add some margin to avoid edge issues
+                self.x_bounds = (min(gaze_xs), max(gaze_xs))
+                self.y_bounds = (min(gaze_ys), max(gaze_ys))
+                logging.info(f"Calibration updated: X={self.x_bounds}, Y={self.y_bounds}")
+                self.calibration_data = data
+
     def process_frame(self, results: Any) -> Tuple[int, int, bool]:
         """Process eye tracking from MediaPipe face results"""
+        # Update calibration if needed (should be event-driven but polling is safe for now)
+        if self.settings_manager and not self.calibration_data:
+            self.update_calibration()
+
         if not results or not results.face_landmarks:
             return self.screen_width // 2, self.screen_height // 2, False
 
@@ -172,11 +204,31 @@ class EyeTrackingEngine(TrackingEngine):
             else:
                 gaze_y_ratio = 0.5
 
-            # Convert gaze ratios to screen coordinates with sensitivity scaling
-            cursor_x = int(gaze_x_ratio * self.screen_width * self.sensitivity +
-                          (self.screen_width // 2) * (1 - self.sensitivity))
-            cursor_y = int(gaze_y_ratio * self.screen_height * self.sensitivity +
-                          (self.screen_height // 2) * (1 - self.sensitivity))
+            # Store raw gaze for calibration
+            self.last_raw_gaze = (gaze_x_ratio, gaze_y_ratio)
+
+            # Apply calibration if available
+            if self.calibration_data:
+                # Map raw gaze (within bounds) to screen coordinates
+                min_x, max_x = self.x_bounds
+                min_y, max_y = self.y_bounds
+                
+                # Normalize to 0-1 range based on calibration bounds
+                norm_x = (gaze_x_ratio - min_x) / (max_x - min_x) if (max_x - min_x) > 0 else 0.5
+                norm_y = (gaze_y_ratio - min_y) / (max_y - min_y) if (max_y - min_y) > 0 else 0.5
+                
+                # Clamp
+                norm_x = max(0, min(1, norm_x))
+                norm_y = max(0, min(1, norm_y))
+                
+                cursor_x = int(norm_x * self.screen_width)
+                cursor_y = int(norm_y * self.screen_height)
+            else:
+                # Default uncalibrated mapping
+                cursor_x = int(gaze_x_ratio * self.screen_width * self.sensitivity +
+                              (self.screen_width // 2) * (1 - self.sensitivity))
+                cursor_y = int(gaze_y_ratio * self.screen_height * self.sensitivity +
+                              (self.screen_height // 2) * (1 - self.sensitivity))
 
             # Ensure cursor stays within screen bounds
             cursor_x = max(0, min(self.screen_width - 1, cursor_x))
@@ -218,16 +270,17 @@ class PoseTrackingEngine(TrackingEngine):
 class TrackingEngineManager:
     """Manages multiple tracking engines"""
 
-    def __init__(self, screen_width: int, screen_height: int):
+    def __init__(self, screen_width: int, screen_height: int, settings_manager=None):
         self.screen_width = screen_width
         self.screen_height = screen_height
+        self.settings_manager = settings_manager
 
         # Initialize all tracking engines
         self.engines = {
             TrackingType.FINGER: FingerTrackingEngine(screen_width, screen_height),
             TrackingType.HAND: HandTrackingEngine(screen_width, screen_height),
             TrackingType.HEAD: HeadTrackingEngine(screen_width, screen_height),
-            TrackingType.EYE: EyeTrackingEngine(screen_width, screen_height),
+            TrackingType.EYE: EyeTrackingEngine(screen_width, screen_height, settings_manager),
             TrackingType.POSE: PoseTrackingEngine(screen_width, screen_height),
         }
 
@@ -301,3 +354,9 @@ class TrackingEngineManager:
         avg_y = sum(y * w for (x, y), w in zip(positions, weights)) / total_weight
 
         return int(avg_x), int(avg_y), True
+
+    def get_raw_gaze(self) -> Optional[Tuple[float, float]]:
+        """Get raw gaze from eye tracking engine"""
+        if TrackingType.EYE in self.engines:
+            return self.engines[TrackingType.EYE].get_raw_gaze()
+        return None

@@ -8,6 +8,7 @@ import numpy as np
 from typing import Tuple, List, Dict, Optional, Any
 from enum import Enum
 import time
+import text_prediction
 
 
 class KeyState(Enum):
@@ -125,6 +126,32 @@ class VirtualKeyboardDisplay:
         self.caps_lock = False
         self.last_hovered_key = None
 
+        # Prediction
+        self.predictor = text_prediction.TextPredictor()
+        self.current_word = ""
+        self.suggestions = []
+        self.suggestion_height = 40
+        self.suggestion_y = self.keyboard_y - self.suggestion_height - 10
+
+    def _update_suggestions(self):
+        """Update suggestions based on current word"""
+        self.suggestions = self.predictor.get_suggestions(self.current_word)
+
+    def _get_suggestion_rects(self) -> List[Tuple[int, int, int, int, str]]:
+        """Get rectangles for current suggestions: (x, y, w, h, text)"""
+        if not self.suggestions:
+            return []
+        
+        rects = []
+        total_width = self.keyboard_width
+        width_per_suggestion = total_width // 3
+        
+        for i, text in enumerate(self.suggestions):
+            x = self.keyboard_x + (i * width_per_suggestion)
+            y = self.suggestion_y
+            rects.append((x, y, width_per_suggestion - 5, self.suggestion_height, text))
+        return rects
+
     def _create_keyboard_layout(self) -> Dict[str, VirtualKey]:
         """Create the QWERTY keyboard layout"""
         keys = {}
@@ -227,9 +254,38 @@ class VirtualKeyboardDisplay:
 
     def press_key_at_position(self, position: Tuple[int, int]) -> str:
         """Press the key at the given position and return the character"""
+        # Check suggestions first
+        px, py = position
+        for x, y, w, h, text in self._get_suggestion_rects():
+            if x <= px <= x + w and y <= py <= y + h:
+                # Suggestion clicked
+                # Return the remaining part of the word plus a space
+                remaining = text[len(self.current_word):] + " "
+                self.current_word = "" # Reset current word
+                self.suggestions = []
+                return remaining
+
         for key in self.keys.values():
             if key.contains_point(position) and key.can_press():
-                return key.press()
+                char = key.press()
+                
+                # Update current word for prediction
+                if char:
+                    if len(char) == 1 and char.isalnum():
+                        self.current_word += char
+                        self._update_suggestions()
+                    elif char == " ":
+                        self.predictor.learn_word(self.current_word) # Learn finished word
+                        self.current_word = ""
+                        self.suggestions = []
+                    elif char == "\b":
+                        self.current_word = self.current_word[:-1]
+                        self._update_suggestions()
+                    elif char == "\n":
+                        self.current_word = ""
+                        self.suggestions = []
+                        
+                return char
         return ""
 
     def draw_keyboard(self, frame: np.ndarray) -> np.ndarray:
@@ -252,6 +308,18 @@ class VirtualKeyboardDisplay:
         # Draw each key
         for key in self.keys.values():
             self._draw_key(display_frame, key)
+
+        # Draw suggestions
+        for x, y, w, h, text in self._get_suggestion_rects():
+            # Background
+            cv2.rectangle(display_frame, (x, y), (x + w, y + h), (200, 200, 255), -1)
+            cv2.rectangle(display_frame, (x, y), (x + w, y + h), (255, 255, 255), 1)
+            
+            # Text
+            text_size = cv2.getTextSize(text, self.font, 0.6, 1)[0]
+            text_x = x + (w - text_size[0]) // 2
+            text_y = y + (h + text_size[1]) // 2
+            cv2.putText(display_frame, text, (text_x, text_y), self.font, 0.6, (0, 0, 0), 1)
 
         return display_frame
 
